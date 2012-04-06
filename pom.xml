@@ -1,0 +1,58 @@
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.softsmithy</groupId>
+        <artifactId>softsmithy-parent</artifactId>
+        <version>2.0-SNAPSHOT</version>
+    </parent>
+    <groupId>org.projectx</groupId>
+    <artifactId>projectx-oss-parent</artifactId>
+    <packaging>pom</packaging>
+    <version>0.1-SNAPSHOT</version>
+    <name>ProjetX OSS - Parent POM</name>
+    <description>This ProjetX Parent POM should be the parent (either directly or indirectly) of every ProjetX project unless there is a good reason to do otherwise (in which case the reason should be documented).</description>
+    <inceptionYear>2012</inceptionYear>
+    <organization>
+        <name>ProjetX</name>
+<!--        <url>http://www.softsmithy.org</url>-->
+    </organization>
+    
+    <licenses>
+        <license>
+            <name>COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0</name>
+            <distribution>repo</distribution>
+            <!--<url>http://java.sun.com/spl.html</url>-->
+            <url>LICENSE.txt</url>
+        </license>
+    </licenses>
+
+    <properties>
+
+    <!-- Dependency Versions Defaults -->
+        <dependency.softsmithy.version>0.1.1-SNAPSHOT</dependency.softsmithy.version>
+        <dependency.junit.version>4.10</dependency.junit.version>
+
+    </properties>
+
+    <!-- Not inherited!?? -->
+    <prerequisites>
+        <maven>${maven.version}</maven>
+    </prerequisites>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.softsmithy.lib</groupId>
+                <artifactId>softsmithy-lib-core</artifactId>
+                <version>${dependency.softsmithy.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${dependency.junit.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
