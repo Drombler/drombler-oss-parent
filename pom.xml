@@ -32,7 +32,7 @@
     <properties>
 
     <!-- Dependency Versions Defaults -->
-        <dependency.softsmithy.version>0.1.1-SNAPSHOT</dependency.softsmithy.version>
+        <dependency.softsmithy.version>0.2</dependency.softsmithy.version>
         <dependency.junit.version>4.10</dependency.junit.version>
 
     </properties>
