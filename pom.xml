@@ -7,17 +7,17 @@
         <version>2.1</version>
     </parent>
     
-    <groupId>org.projectx</groupId>
-    <artifactId>projectx-oss-parent</artifactId>
+    <groupId>org.drombler</groupId>
+    <artifactId>drombler-oss-parent</artifactId>
     <packaging>pom</packaging>
     <version>0.1-SNAPSHOT</version>
     
-    <name>ProjetX OSS - Parent POM</name>
-    <description>This ProjetX Parent POM should be the parent (either directly or indirectly) of every ProjetX project unless there is a good reason to do otherwise (in which case the reason should be documented).</description>
+    <name>Drombler - OSS - Parent POM</name>
+    <description>This Drombler Parent POM should be the parent (either directly or indirectly) of every ProjetX project unless there is a good reason to do otherwise (in which case the reason should be documented).</description>
     <inceptionYear>2012</inceptionYear>
     <organization>
-        <name>ProjetX</name>
-<!--        <url>http://www.softsmithy.org</url>-->
+        <name>Drombler</name>
+        <url>http://www.drombler.org</url>
     </organization>
     
     <licenses>
