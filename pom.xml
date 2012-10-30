@@ -1,4 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+        COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Notice
 
+The contents of this file are subject to the COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL)
+Version 1.0 (the "License"); you may not use this file except in
+compliance with the License. A copy of the License is available at
+http://www.opensource.org/licenses/cddl1.txt
+
+The Original Code is Drombler.org. The Initial Developer of the
+Original Code is Florian Brunner (Sourceforge.net user: puce).
+Copyright 2012 Drombler.org. All Rights Reserved.
+
+Contributor(s): .
+-->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
@@ -16,13 +30,15 @@
     <description>This Drombler Parent POM should be the parent (either directly or indirectly) of every ProjetX project unless there is a good reason to do otherwise (in which case the reason should be documented).</description>
     <inceptionYear>2012</inceptionYear>
     <organization>
-        <name>Drombler</name>
+        <name>Drombler.org</name>
         <url>http://www.drombler.org</url>
     </organization>
     
     <licenses>
         <license>
-            <name>COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0</name>
+            <name>CDDL</name>
+
+            <!--            <name>COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0</name>-->
             <distribution>repo</distribution>
             <!--<url>http://java.sun.com/spl.html</url>-->
             <url>LICENSE.txt</url>
@@ -30,11 +46,11 @@
     </licenses>
 
     <properties>
-
-    <!-- Dependency Versions Defaults -->
+        <netbeans.hint.license>drombler-oss</netbeans.hint.license>
+        <project.license>CDDL</project.license>
+        <!-- Dependency Versions Defaults -->
         <dependency.softsmithy.version>0.2</dependency.softsmithy.version>
         <dependency.junit.version>4.10</dependency.junit.version>
-
     </properties>
 
     <!-- Not inherited!?? -->
