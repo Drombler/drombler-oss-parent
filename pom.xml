@@ -26,7 +26,7 @@ Contributor(s): .
     <packaging>pom</packaging>
     <version>0.1-SNAPSHOT</version>
     
-    <name>Drombler - OSS - Parent POM</name>
+    <name>Drombler OSS - Parent POM</name>
     <description>This Drombler Parent POM should be the parent (either directly or indirectly) of every ProjetX project unless there is a good reason to do otherwise (in which case the reason should be documented).</description>
     <inceptionYear>2012</inceptionYear>
     <organization>
