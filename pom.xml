@@ -19,6 +19,7 @@ Contributor(s): .
         <groupId>org.softsmithy</groupId>
         <artifactId>softsmithy-parent</artifactId>
         <version>2.1</version>
+        <relativePath />
     </parent>
     
     <groupId>org.drombler</groupId>
@@ -27,18 +28,28 @@ Contributor(s): .
     <version>0.1-SNAPSHOT</version>
     
     <name>Drombler OSS - Parent POM</name>
-    <description>This Drombler Parent POM should be the parent (either directly or indirectly) of every ProjetX project unless there is a good reason to do otherwise (in which case the reason should be documented).</description>
+    <url>http://www.drombler.org</url>
+    <description>This Drombler OSS Parent POM should be the parent (either directly or indirectly) of every Drombler project unless there is a good reason to do otherwise (in which case the reason should be documented).</description>
     <inceptionYear>2012</inceptionYear>
     <organization>
-        <name>Drombler.org</name>
-        <url>http://www.drombler.org</url>
+        <name>Drombler</name>
+        <url>http://www.drombler.com</url>
     </organization>
+    
+    <scm>
+        <connection>scm:hg:http://hg.code.sf.net/p/drombler/drombler-oss-parent</connection>
+        <developerConnection>scm:hg:ssh://${username}@hg.code.sf.net/p/drombler/drombler-oss-parent</developerConnection>
+        <url>http://sourceforge.net/p/drombler/drombler-oss-parent</url>
+    </scm>
+
+    <issueManagement>
+        <system>SourceForge.net</system>
+        <url>http://sourceforge.net/tracker/?group_id=64833</url>
+    </issueManagement>
     
     <licenses>
         <license>
-            <name>CDDL</name>
-
-            <!--            <name>COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0</name>-->
+            <name>COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0</name>
             <distribution>repo</distribution>
             <!--<url>http://java.sun.com/spl.html</url>-->
             <url>LICENSE.txt</url>
@@ -46,9 +57,14 @@ Contributor(s): .
     </licenses>
 
     <properties>
+        
+        <!-- Dev Environment Defaults -->
         <netbeans.hint.license>drombler-oss</netbeans.hint.license>
-        <project.license>CDDL</project.license>
+        <java.compiler.compilerArgument>-Xlint:all,-serial</java.compiler.compilerArgument>
+        <excludePackageNames>*.internal.*:*.impl.*</excludePackageNames> <!-- used by Javadoc plugin --><!-- TODO: get this from OSGi meta data-->
+       
         <!-- Dependency Versions Defaults -->
+        <dependency.osgi.version>1.4.0</dependency.osgi.version>
         <dependency.softsmithy.version>0.2</dependency.softsmithy.version>
         <dependency.junit.version>4.10</dependency.junit.version>
     </properties>
@@ -58,8 +74,40 @@ Contributor(s): .
         <maven>${maven.version}</maven>
     </prerequisites>
 
+    <build>
+        <pluginManagement>        
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.felix</groupId>
+                    <artifactId>maven-bundle-plugin</artifactId>
+                    <version>2.3.7</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.felix</groupId>
+                    <artifactId>maven-scr-plugin</artifactId>
+                    <version>1.7.4</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.jvnet.jaxb2.maven2</groupId>
+                    <artifactId>maven-jaxb2-plugin</artifactId>
+                    <version>0.8.1</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+    
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>org.osgi.core</artifactId>
+                <version>${dependency.osgi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>org.osgi.compendium</artifactId>
+                <version>${dependency.osgi.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.softsmithy.lib</groupId>
                 <artifactId>softsmithy-lib-core</artifactId>
