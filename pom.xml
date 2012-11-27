@@ -66,7 +66,7 @@ Contributor(s): .
         <!-- Dependency Versions Defaults -->
         <dependency.osgi.version>1.4.0</dependency.osgi.version>
         <dependency.osgi-scr.version>1.6.0</dependency.osgi-scr.version>
-        <dependency.softsmithy.version>0.2.1-SNAPSHOT</dependency.softsmithy.version>
+        <dependency.softsmithy.version>0.3</dependency.softsmithy.version>
         <dependency.junit.version>4.10</dependency.junit.version>
     </properties>
 
