@@ -66,13 +66,13 @@ Contributor(s): .
         <!-- Plugin Versions Defaults -->
         <plugin.bundle.version>2.3.7</plugin.bundle.version>
         <plugin.jaxb.version>0.8.3</plugin.jaxb.version>
-        <plugin.felix-scr.version>1.11.0</plugin.felix-scr.version>
+        <plugin.felix-scr.version>1.13.0</plugin.felix-scr.version>
         <plugin.toolchains.version>1.0</plugin.toolchains.version>
         
         <!-- Dependency Versions Defaults -->
         <dependency.osgi.version>1.4.0</dependency.osgi.version>
         <dependency.felix-scr.version>1.6.2</dependency.felix-scr.version>
-        <dependency.felix-scr-annotations.version>1.9.0</dependency.felix-scr-annotations.version>
+        <dependency.felix-scr-annotations.version>1.9.4</dependency.felix-scr-annotations.version>
         <dependency.softsmithy.version>0.3.1-SNAPSHOT</dependency.softsmithy.version>
         <dependency.junit.version>4.11</dependency.junit.version>
     </properties>
@@ -134,6 +134,11 @@ Contributor(s): .
             <dependency>
                 <groupId>org.softsmithy.lib</groupId>
                 <artifactId>softsmithy-lib-core</artifactId>
+                <version>${dependency.softsmithy.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.softsmithy.lib</groupId>
+                <artifactId>softsmithy-lib-time</artifactId>
                 <version>${dependency.softsmithy.version}</version>
             </dependency>
             <dependency>
