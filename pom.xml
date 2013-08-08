@@ -65,12 +65,12 @@ Contributor(s): .
        
         <!-- Plugin Versions Defaults -->
         <plugin.jaxb.version>0.8.3</plugin.jaxb.version>
-        <plugin.felix-scr.version>1.14.0</plugin.felix-scr.version>
+        <plugin.felix-scr.version>1.7.4</plugin.felix-scr.version>
         
         <!-- Dependency Versions Defaults -->
         <dependency.osgi.version>1.4.0</dependency.osgi.version>
         <dependency.felix-scr.version>1.6.2</dependency.felix-scr.version>
-        <dependency.felix-scr-annotations.version>1.9.6</dependency.felix-scr-annotations.version>
+        <dependency.felix-scr-annotations.version>1.6.0</dependency.felix-scr-annotations.version>
         <dependency.commons-lang3.version>3.1</dependency.commons-lang3.version>
         <dependency.softsmithy.version>0.3.1-SNAPSHOT</dependency.softsmithy.version>
         <dependency.junit.version>4.11</dependency.junit.version>
