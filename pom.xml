@@ -72,7 +72,7 @@ Contributor(s): .
         <dependency.felix-scr.version>1.6.2</dependency.felix-scr.version>
         <dependency.felix-scr-annotations.version>1.6.0</dependency.felix-scr-annotations.version>
         <dependency.commons-lang3.version>3.1</dependency.commons-lang3.version>
-        <dependency.softsmithy.version>0.3.1-SNAPSHOT</dependency.softsmithy.version>
+        <dependency.softsmithy.version>0.4</dependency.softsmithy.version>
         <dependency.junit.version>4.11</dependency.junit.version>
     </properties>
 
