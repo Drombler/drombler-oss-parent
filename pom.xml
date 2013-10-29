@@ -25,7 +25,7 @@ Contributor(s): .
     <groupId>org.drombler</groupId>
     <artifactId>drombler-oss-parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.1</version>
+    <version>1.2-SNAPSHOT</version>
     
     <name>Drombler OSS - Parent POM</name>
     <url>http://www.drombler.org</url>
@@ -40,7 +40,7 @@ Contributor(s): .
         <connection>scm:hg:http://hg.code.sf.net/p/drombler/drombler-oss-parent</connection>
         <developerConnection>scm:hg:ssh://${username}@hg.code.sf.net/p/drombler/drombler-oss-parent</developerConnection>
         <url>http://sourceforge.net/p/drombler/drombler-oss-parent</url>
-      <tag>drombler-oss-parent-1.1</tag>
+      <tag>HEAD</tag>
   </scm>
 
     <issueManagement>
