@@ -61,6 +61,7 @@ Contributor(s): .
         
         <!-- Dev Environment Defaults -->
         <netbeans.hint.license>drombler-oss</netbeans.hint.license>
+        <netbeans.hint.jdkPlatform>JDK_1.7</netbeans.hint.jdkPlatform>
         <java.compiler.compilerArgument>-Xlint:all,-serial</java.compiler.compilerArgument>
         <excludePackageNames>*.internal.*:*.impl.*</excludePackageNames> <!-- used by Javadoc plugin --><!-- TODO: get this from OSGi meta data-->
        
