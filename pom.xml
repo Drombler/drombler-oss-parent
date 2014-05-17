@@ -61,6 +61,8 @@ Contributor(s): .
         
         <!-- Dev Environment Defaults -->
         <netbeans.hint.license>drombler-oss</netbeans.hint.license>
+        
+        <!-- TODO: consider to support  -Xdoclint:all -->
         <java.compiler.compilerArgument>-Xlint:all,-serial</java.compiler.compilerArgument>
         <excludePackageNames>*.internal.*:*.impl.*</excludePackageNames> <!-- used by Javadoc plugin --><!-- TODO: get this from OSGi meta data-->
         <java.min.version>1.8</java.min.version>
