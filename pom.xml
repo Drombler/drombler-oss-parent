@@ -111,7 +111,8 @@ Contributor(s): .
                         <detectLinks>true</detectLinks>
                         <links>
                             <link>http://docs.oracle.com/javaee/7/api/</link>
-                            <link>http://www.softsmithy.org/lib/${dependency.softsmithy.version}/docs/api/softsmithy-lib-core/</link>
+                            <!-- TODO: needed?-->
+                            <link>http://www.softsmithy.org/lib/${dependency.softsmithy.version}/docs/site/softsmithy-lib-all/softsmithy-lib-all/apidocs/</link>
                             <link>http://docs.oracle.com/javase/8/javafx/api/</link>
                         </links>
                     </configuration>
@@ -284,7 +285,8 @@ Contributor(s): .
                     <detectLinks>true</detectLinks>
                     <links>
                         <link>http://docs.oracle.com/javaee/7/api/</link>
-                        <link>http://www.softsmithy.org/lib/${dependency.softsmithy.version}/docs/api/softsmithy-lib-core/</link>
+                        <!-- TODO: needed?-->
+                        <link>http://www.softsmithy.org/lib/${dependency.softsmithy.version}/docs/site/softsmithy-lib-all/softsmithy-lib-all/apidocs/</link>
                         <link>http://docs.oracle.com/javase/8/javafx/api/</link>
                     </links>
                     <skip>${reporting.javadoc.skip}</skip>
