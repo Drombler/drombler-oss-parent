@@ -68,6 +68,7 @@ Contributor(s): .
         <excludePackageNamesAggregate>${excludePackageNames}:*.maven.plugin.*:*.samples.*</excludePackageNamesAggregate>
         <java.min.version>1.8</java.min.version>
         <jaxb.locale>en</jaxb.locale>
+        <release.plugin.arguments>-Psonatype-oss-release -Dusername=${username} -Dhttps.protocols=TLSv1.2</release.plugin.arguments>
         
         <!-- Plugin Versions Defaults -->
         <plugin.jaxb.version>0.11.0</plugin.jaxb.version>
