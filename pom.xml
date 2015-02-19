@@ -65,6 +65,7 @@ Contributor(s): .
         <!-- TODO: consider to support  -Xdoclint:all -->
         <java.compiler.compilerArgument>-Xlint:all,-serial</java.compiler.compilerArgument>
         <excludePackageNames>*.internal.*:*.impl.*</excludePackageNames> <!-- used by Javadoc plugin --><!-- TODO: get this from OSGi meta data-->
+        <excludePackageNamesAggregate>${excludePackageNames}:*.maven.plugin.*:*.samples.*</excludePackageNamesAggregate>
         <java.min.version>1.8</java.min.version>
         <jaxb.locale>en</jaxb.locale>
         
@@ -271,7 +272,7 @@ Contributor(s): .
                             <report>aggregate</report>
                         </reports>
                         <configuration>
-                            <excludePackageNames>${excludePackageNames}:*.maven.plugin.*:*.samples.*</excludePackageNames>
+                            <excludePackageNames>${excludePackageNamesAggregate}</excludePackageNames>
                         </configuration>
                     </reportSet>
                 </reportSets>
