@@ -74,6 +74,7 @@ Contributor(s): .
         <plugin.felix-scr.version>1.7.4</plugin.felix-scr.version>
         <plugin.plugin-plugin.version>3.3</plugin.plugin-plugin.version>
         <plugin.inherit.version>1.5</plugin.inherit.version>
+        <plugin.asciidoctor.version>1.5.2</plugin.asciidoctor.version>
         
         <!-- Dependency Versions Defaults -->
         <dependency.osgi.version>1.4.0</dependency.osgi.version>
@@ -139,6 +140,24 @@ Contributor(s): .
                     <groupId>org.ops4j</groupId>
                     <artifactId>maven-inherit-plugin</artifactId>
                     <version>${plugin.inherit.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.asciidoctor</groupId>
+                    <artifactId>asciidoctor-maven-plugin</artifactId>
+                    <version>${plugin.asciidoctor.version}</version>
+                    <executions>
+                        <execution>
+                            <id>output-html</id> 
+                            <phase>generate-resources</phase> 
+                            <goals>
+                                <goal>process-asciidoc</goal> 
+                            </goals>
+                            <configuration>
+                                <preserveDirectories>true</preserveDirectories>
+                                <backend>html5</backend>
+                            </configuration>
+                        </execution>
+                    </executions>
                 </plugin>
             </plugins>
         </pluginManagement>
