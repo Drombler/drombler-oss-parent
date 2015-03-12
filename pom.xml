@@ -72,8 +72,7 @@ Contributor(s): .
         <!-- Plugin Versions Defaults -->
         <plugin.jaxb.version>0.11.0</plugin.jaxb.version>
         <plugin.felix-scr.version>1.20.0</plugin.felix-scr.version>
-        <plugin.plugin-plugin.version>3.3</plugin.plugin-plugin.version>
-        <plugin.inherit.version>1.5</plugin.inherit.version>
+        <plugin.plugin-plugin.version>3.4</plugin.plugin-plugin.version>
         <plugin.asciidoctor.version>1.5.2</plugin.asciidoctor.version>
         
         <!-- Dependency Versions Defaults -->
@@ -86,6 +85,11 @@ Contributor(s): .
         <dependency.softsmithy.version>0.5</dependency.softsmithy.version>
         <dependency.junit.version>4.11</dependency.junit.version>
         <dependency.slf4j.version>1.7.6</dependency.slf4j.version>
+        <dependency.maven-plugin-api.version>3.2.5</dependency.maven-plugin-api.version>
+        <dependency.maven-plugin-annotations.version>3.4</dependency.maven-plugin-annotations.version>
+        <dependency.maven-project.version>3.0-alpha-2</dependency.maven-project.version>
+        <dependency.maven-jar-plugin.version>2.6</dependency.maven-jar-plugin.version>
+        <dependency.maven-pax-plugin.version>1.5</dependency.maven-pax-plugin.version>
         <!--        <dependency.inject.version>1</dependency.inject.version>
         <dependency.cdi.version>1.0-SP4</dependency.cdi.version>
         <dependency.cdi.version>1.2</dependency.cdi.version>-->
@@ -137,11 +141,6 @@ Contributor(s): .
                         <!--version 0.10.0-->
                         <locale>${jaxb.locale}</locale>
                     </configuration>
-                </plugin>
-                <plugin>
-                    <groupId>org.ops4j</groupId>
-                    <artifactId>maven-inherit-plugin</artifactId>
-                    <version>${plugin.inherit.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.asciidoctor</groupId>
@@ -230,23 +229,28 @@ Contributor(s): .
             <dependency>
                 <groupId>org.apache.maven</groupId>
                 <artifactId>maven-plugin-api</artifactId>
-                <version>3.0.3</version>
+                <version>${dependency.maven-plugin-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.maven.plugin-tools</groupId>
+                <artifactId>maven-plugin-annotations</artifactId>
+                <version>${dependency.maven-plugin-annotations.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.maven</groupId>
                 <artifactId>maven-project</artifactId>
-                <version>3.0-alpha-2</version>
+                <version>${dependency.maven-project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <type>maven-plugin</type>
-                <version>2.3.2</version>
+                <version>${dependency.maven-jar-plugin.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.ops4j</groupId>
                 <artifactId>maven-pax-plugin</artifactId>
-                <version>1.5</version>
+                <version>${dependency.maven-pax-plugin.version}</version>
             </dependency>
             <!--            <dependency>
                 <groupId>javax.inject</groupId>
