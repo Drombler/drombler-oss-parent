@@ -90,9 +90,8 @@ Contributor(s): .
         <dependency.maven-project.version>3.0-alpha-2</dependency.maven-project.version>
         <dependency.maven-jar-plugin.version>2.6</dependency.maven-jar-plugin.version>
         <dependency.maven-pax-plugin.version>1.5</dependency.maven-pax-plugin.version>
-        <!--        <dependency.inject.version>1</dependency.inject.version>
-        <dependency.cdi.version>1.0-SP4</dependency.cdi.version>
-        <dependency.cdi.version>1.2</dependency.cdi.version>-->
+        <dependency.pax-cdi.version>0.11.0</dependency.pax-cdi.version>
+        <dependency.weld.version>2.2.9.Final</dependency.weld.version>
 
         <!-- Reporting Defaults -->
         <reporting.javadoc.skip>false</reporting.javadoc.skip>
@@ -138,7 +137,6 @@ Contributor(s): .
                         <args>
                             <arg>-mark-generated</arg>
                         </args>
-                        <!--version 0.10.0-->
                         <locale>${jaxb.locale}</locale>
                     </configuration>
                 </plugin>
@@ -251,23 +249,6 @@ Contributor(s): .
                 <groupId>org.ops4j</groupId>
                 <artifactId>maven-pax-plugin</artifactId>
                 <version>${dependency.maven-pax-plugin.version}</version>
-            </dependency>
-            <!--            <dependency>
-                <groupId>javax.inject</groupId>
-                <artifactId>javax.inject</artifactId>
-                <version>${dependency.inject.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>javax.enterprise</groupId>
-                <artifactId>cdi-api</artifactId>
-                <version>${dependency.cdi.version}</version>
-            </dependency>-->
-            <dependency>
-                <groupId>org.jboss.weld</groupId>
-                <artifactId>weld-api-bom</artifactId>
-                <version>2.2.SP3</version>
-                <type>pom</type>
-                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
