@@ -157,6 +157,8 @@ Contributor(s): .
                             <configuration>
                                 <preserveDirectories>true</preserveDirectories>
                                 <backend>html5</backend>
+                                <!--<sourceHighlighter>coderay</sourceHighlighter>-->
+                                <sourceHighlighter>highlightjs</sourceHighlighter>
                             </configuration>
                         </execution>
                     </executions>
