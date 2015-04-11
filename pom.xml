@@ -70,6 +70,7 @@ Contributor(s): .
         <jaxb.locale>en</jaxb.locale>
         
         <!-- Plugin Versions Defaults -->
+        <plugin.exec.version>1.4.0</plugin.exec.version>
         <plugin.jaxb.version>0.11.0</plugin.jaxb.version>
         <plugin.felix-scr.version>1.7.4</plugin.felix-scr.version>
         <plugin.plugin-plugin.version>3.3</plugin.plugin-plugin.version>
@@ -118,6 +119,11 @@ Contributor(s): .
                             <link>http://docs.oracle.com/javase/8/javafx/api/</link>
                         </links>
                     </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>exec-maven-plugin</artifactId>
+                    <version>${plugin.exec.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.felix</groupId>
