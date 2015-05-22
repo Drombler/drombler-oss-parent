@@ -157,6 +157,16 @@ Contributor(s): .
                     <groupId>org.asciidoctor</groupId>
                     <artifactId>asciidoctor-maven-plugin</artifactId>
                     <version>${plugin.asciidoctor.version}</version>
+                    <configuration>
+                        <!-- Attributes common to all output formats -->
+                        <attributes>
+                            <endpoint-url>http://www.drombler.org</endpoint-url>
+                            <sourcedir>${project.build.sourceDirectory}</sourcedir>
+                            <project-version>${project.version}</project-version>
+                            <dromblersourcedir>${project.build.directory}/drombler-sources</dromblersourcedir>
+                            <bashsourcedir>${project.build.directory}/bash-sources</bashsourcedir>
+                        </attributes>
+                    </configuration>
                     <executions>
                         <execution>
                             <id>output-html</id> 
@@ -169,6 +179,9 @@ Contributor(s): .
                                 <backend>html5</backend>
                                 <!--<sourceHighlighter>coderay</sourceHighlighter>-->
                                 <sourceHighlighter>highlightjs</sourceHighlighter>
+                                <attributes>
+                                    <imagesdir>./images</imagesdir>
+                                </attributes>
                             </configuration>
                         </execution>
                     </executions>
