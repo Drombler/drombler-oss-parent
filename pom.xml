@@ -162,6 +162,7 @@ Contributor(s): .
                         <attributes>
                             <endpoint-url>http://www.drombler.org</endpoint-url>
                             <sourcedir>${project.build.sourceDirectory}</sourcedir>
+                            <resourcesdir>${basedir}/src/main/resources</resourcesdir>
                             <project-version>${project.version}</project-version>
                             <dromblersourcedir>${project.build.directory}/drombler-sources</dromblersourcedir>
                             <bashsourcedir>${project.build.directory}/bash-sources</bashsourcedir>
