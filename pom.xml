@@ -182,6 +182,7 @@ Contributor(s): .
                                 <sourceHighlighter>highlightjs</sourceHighlighter>
                                 <attributes>
                                     <imagesdir>./images</imagesdir>
+                                    <toc>right</toc>
                                 </attributes>
                             </configuration>
                         </execution>
