@@ -171,7 +171,7 @@ Contributor(s): .
                     <executions>
                         <execution>
                             <id>output-html</id> 
-                            <phase>process-resources</phase> 
+                            <phase>site</phase> 
                             <goals>
                                 <goal>process-asciidoc</goal> 
                             </goals>
