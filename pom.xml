@@ -165,17 +165,20 @@ Contributor(s): .
                             <resourcesdir>${basedir}/src/main/resources</resourcesdir>
                             <project-version>${project.version}</project-version>
                             <dromblersourcedir>${project.build.directory}/drombler-sources</dromblersourcedir>
-                            <bashsourcedir>${project.build.directory}/bash-sources</bashsourcedir>
+                            <bashsourcedir>${project.build.directory}/bash-sources/tutorial</bashsourcedir>
+                            <revnumber>${project.version}</revnumber>
                         </attributes>
                     </configuration>
                     <executions>
                         <execution>
-                            <id>output-html</id> 
+                            <id>tutorial-html</id> 
                             <phase>site</phase> 
                             <goals>
                                 <goal>process-asciidoc</goal> 
                             </goals>
                             <configuration>
+                                <sourceDirectory>${basedir}/src/main/asciidoc/tutorial</sourceDirectory>
+                                <outputDirectory>${project.build.directory}/generated-docs/docs/tutorial</outputDirectory>
                                 <preserveDirectories>true</preserveDirectories>
                                 <backend>html5</backend>
                                 <!--<sourceHighlighter>coderay</sourceHighlighter>-->
@@ -184,6 +187,20 @@ Contributor(s): .
                                     <imagesdir>./images</imagesdir>
                                     <toc>right</toc>
                                 </attributes>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>gh-pages-html</id> 
+                            <phase>site</phase> 
+                            <goals>
+                                <goal>process-asciidoc</goal> 
+                            </goals>
+                            <configuration>
+                                <sourceDirectory>${basedir}/src/main/asciidoc/gh-pages</sourceDirectory>
+                                <preserveDirectories>true</preserveDirectories>
+                                <backend>html5</backend>
+                                <!--<sourceHighlighter>coderay</sourceHighlighter>-->
+                                <sourceHighlighter>highlightjs</sourceHighlighter>
                             </configuration>
                         </execution>
                     </executions>
