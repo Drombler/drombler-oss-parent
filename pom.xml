@@ -18,14 +18,14 @@ Contributor(s): .
     <parent>
         <groupId>org.softsmithy</groupId>
         <artifactId>softsmithy-parent</artifactId>
-        <version>2.5</version>
+        <version>2.7</version>
         <relativePath />
     </parent>
     
     <groupId>org.drombler</groupId>
     <artifactId>drombler-oss-parent</artifactId>
     <packaging>pom</packaging>
-    <version>2.2-SNAPSHOT</version>
+    <version>2.2</version>
     
     <name>Drombler OSS - Parent POM</name>
     <url>http://www.drombler.org</url>
@@ -37,9 +37,9 @@ Contributor(s): .
     </organization>
     
     <scm>
-        <connection>scm:hg:http://hg.code.sf.net/p/drombler/drombler-oss-parent</connection>
-        <developerConnection>scm:hg:ssh://${username}@hg.code.sf.net/p/drombler/drombler-oss-parent</developerConnection>
-        <url>http://sourceforge.net/p/drombler/drombler-oss-parent</url>
+        <connection>scm:git:https://github.com/Drombler/drombler-oss-parent.git</connection>
+        <developerConnection>scm:git:git@github.com:Drombler/drombler-oss-parent.git</developerConnection>
+        <url>https://github.com/Drombler/drombler-oss-parent</url>
         <tag>HEAD</tag>
     </scm>
 
@@ -65,7 +65,7 @@ Contributor(s): .
         <!-- TODO: consider to support  -Xdoclint:all -->
         <java.compiler.compilerArgument>-Xlint:all,-serial</java.compiler.compilerArgument>
         <excludePackageNames>*.internal.*:*.impl.*</excludePackageNames> <!-- used by Javadoc plugin --><!-- TODO: get this from OSGi meta data-->
-        <excludePackageNamesAggregate>${excludePackageNames}:*.maven.plugin.*:*.samples.*</excludePackageNamesAggregate>
+        <excludePackageNamesAggregate>${excludePackageNames}:*.maven.plugin.*:*.samples.*:tutorial.*</excludePackageNamesAggregate>
         <java.min.version>1.8</java.min.version>
         <jaxb.locale>en</jaxb.locale>
         
@@ -165,17 +165,20 @@ Contributor(s): .
                             <resourcesdir>${basedir}/src/main/resources</resourcesdir>
                             <project-version>${project.version}</project-version>
                             <dromblersourcedir>${project.build.directory}/drombler-sources</dromblersourcedir>
-                            <bashsourcedir>${project.build.directory}/bash-sources</bashsourcedir>
+                            <bashsourcedir>${project.build.directory}/bash-sources/tutorial</bashsourcedir>
+                            <revnumber>${project.version}</revnumber>
                         </attributes>
                     </configuration>
                     <executions>
                         <execution>
-                            <id>output-html</id> 
-                            <phase>process-resources</phase> 
+                            <id>tutorial-html</id> 
+                            <phase>site</phase> 
                             <goals>
                                 <goal>process-asciidoc</goal> 
                             </goals>
                             <configuration>
+                                <sourceDirectory>${basedir}/src/main/asciidoc/tutorial</sourceDirectory>
+                                <outputDirectory>${project.build.directory}/generated-docs/docs/tutorial</outputDirectory>
                                 <preserveDirectories>true</preserveDirectories>
                                 <backend>html5</backend>
                                 <!--<sourceHighlighter>coderay</sourceHighlighter>-->
@@ -184,6 +187,20 @@ Contributor(s): .
                                     <imagesdir>./images</imagesdir>
                                     <toc>right</toc>
                                 </attributes>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>gh-pages-html</id> 
+                            <phase>site</phase> 
+                            <goals>
+                                <goal>process-asciidoc</goal> 
+                            </goals>
+                            <configuration>
+                                <sourceDirectory>${basedir}/src/main/asciidoc/gh-pages</sourceDirectory>
+                                <preserveDirectories>true</preserveDirectories>
+                                <backend>html5</backend>
+                                <!--<sourceHighlighter>coderay</sourceHighlighter>-->
+                                <sourceHighlighter>highlightjs</sourceHighlighter>
                             </configuration>
                         </execution>
                     </executions>
