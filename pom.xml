@@ -85,6 +85,7 @@ Contributor(s): .
         <dependency.commons-lang3.version>3.1</dependency.commons-lang3.version>
         <dependency.softsmithy.version>0.6-SNAPSHOT</dependency.softsmithy.version>
         <dependency.junit.version>4.11</dependency.junit.version>
+        <dependency.mockito.version>1.10.19</dependency.mockito.version>
         <dependency.slf4j.version>1.7.6</dependency.slf4j.version>
         <dependency.maven-plugin-api.version>3.2.5</dependency.maven-plugin-api.version>
         <dependency.maven-plugin-annotations.version>3.4</dependency.maven-plugin-annotations.version>
@@ -266,6 +267,12 @@ Contributor(s): .
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>${dependency.junit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-core</artifactId>
+                <version>${dependency.mockito.version}</version>
+                <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>org.slf4j</groupId>
