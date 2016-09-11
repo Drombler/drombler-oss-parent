@@ -18,7 +18,7 @@ Contributor(s): .
     <parent>
         <groupId>org.softsmithy</groupId>
         <artifactId>softsmithy-parent</artifactId>
-        <version>2.7</version>
+        <version>3.0</version>
         <relativePath />
     </parent>
     
@@ -66,7 +66,6 @@ Contributor(s): .
         <java.compiler.compilerArgument>-Xlint:all,-serial</java.compiler.compilerArgument>
         <excludePackageNames>*.internal.*:*.impl.*</excludePackageNames> <!-- used by Javadoc plugin --><!-- TODO: get this from OSGi meta data-->
         <excludePackageNamesAggregate>${excludePackageNames}:*.maven.plugin.*:*.samples.*:tutorial.*</excludePackageNamesAggregate>
-        <java.min.version>1.8</java.min.version>
         <jaxb.locale>en</jaxb.locale>
         
         <!-- Plugin Versions Defaults -->
@@ -83,7 +82,7 @@ Contributor(s): .
         <dependency.felix-scr.version>1.8.2</dependency.felix-scr.version>
         <dependency.felix-scr-annotations.version>1.9.10</dependency.felix-scr-annotations.version>
         <dependency.commons-lang3.version>3.1</dependency.commons-lang3.version>
-        <dependency.softsmithy.version>0.6-SNAPSHOT</dependency.softsmithy.version>
+        <dependency.softsmithy.version>0.6</dependency.softsmithy.version>
         <dependency.junit.version>4.11</dependency.junit.version>
         <dependency.mockito.version>1.10.19</dependency.mockito.version>
         <dependency.slf4j.version>1.7.6</dependency.slf4j.version>
