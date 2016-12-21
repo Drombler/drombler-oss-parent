@@ -79,6 +79,7 @@ Contributor(s): .
         <!-- Dependency Versions Defaults -->
         <dependency.osgi-core.version>6.0.0</dependency.osgi-core.version>
         <dependency.osgi-compendium.version>5.0.0</dependency.osgi-compendium.version>
+        <dependency.felix-configadmin.version>1.8.12</dependency.felix-configadmin.version>
         <dependency.felix-framework.version>5.6.1</dependency.felix-framework.version>
         <dependency.felix-scr.version>2.0.6</dependency.felix-scr.version>
         <dependency.felix-scr-annotations.version>1.12.0</dependency.felix-scr-annotations.version>
@@ -226,6 +227,11 @@ Contributor(s): .
                 <groupId>org.osgi</groupId>
                 <artifactId>org.osgi.compendium</artifactId>
                 <version>${dependency.osgi-compendium.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>org.apache.felix.configadmin</artifactId>
+                <version>${dependency.felix-configadmin.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.felix</groupId>
