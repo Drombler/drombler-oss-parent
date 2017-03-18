@@ -67,6 +67,7 @@ Contributor(s): .
         <excludePackageNames>*.internal.*:*.impl.*</excludePackageNames> <!-- used by Javadoc plugin --><!-- TODO: get this from OSGi meta data-->
         <excludePackageNamesAggregate>${excludePackageNames}:*.maven.plugin.*:*.samples.*:tutorial.*</excludePackageNamesAggregate>
         <jaxb.locale>en</jaxb.locale>
+        <dollar>$</dollar>  
         
         <!-- Plugin Versions Defaults -->
         <plugin.exec.version>1.5.0</plugin.exec.version>
