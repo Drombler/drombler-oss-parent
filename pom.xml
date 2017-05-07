@@ -273,6 +273,11 @@ Contributor(s): .
             </dependency>
             <dependency>
                 <groupId>org.softsmithy.lib</groupId>
+                <artifactId>softsmithy-lib-beans</artifactId>
+                <version>${dependency.softsmithy.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.softsmithy.lib</groupId>
                 <artifactId>softsmithy-lib-time</artifactId>
                 <version>${dependency.softsmithy.version}</version>
             </dependency>
