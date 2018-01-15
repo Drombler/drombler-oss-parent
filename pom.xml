@@ -129,10 +129,10 @@ Contributor(s): .
                         <additionalparam>-javafx, -Xdoclint:accessibility, -Xdoclint:html, -Xdoclint:missing, -Xdoclint:reference</additionalparam>
                         <detectLinks>true</detectLinks>
                         <links>
-                            <link>http://docs.oracle.com/javaee/7/api/</link>
+                            <link>https://docs.oracle.com/javaee/7/api/</link>
                             <!-- TODO: needed?-->
                             <!--                            <link>http://www.softsmithy.org/lib/${dependency.softsmithy.version}/docs/site/softsmithy-lib-all/softsmithy-lib-all/apidocs/</link>-->
-                            <link>http://docs.oracle.com/javase/8/javafx/api/</link>
+                            <link>https://docs.oracle.com/javase/8/javafx/api/</link>
                         </links>
                     </configuration>
                 </plugin>
@@ -511,10 +511,10 @@ Contributor(s): .
                     <additionalparam>-javafx, -Xdoclint:accessibility, -Xdoclint:html, -Xdoclint:missing, -Xdoclint:reference</additionalparam>
                     <detectLinks>true</detectLinks>
                     <links>
-                        <link>http://docs.oracle.com/javaee/7/api/</link>
+                        <link>https://docs.oracle.com/javaee/7/api/</link>
                         <!-- TODO: needed?-->
                         <!--<link>http://www.softsmithy.org/lib/${dependency.softsmithy.version}/docs/site/softsmithy-lib-all/softsmithy-lib-all/apidocs/</link>-->
-                        <link>http://docs.oracle.com/javase/8/javafx/api/</link>
+                        <link>https://docs.oracle.com/javase/8/javafx/api/</link>
                     </links>
                     <skip>${reporting.javadoc.skip}</skip>
                 </configuration>
