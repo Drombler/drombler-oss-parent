@@ -134,6 +134,7 @@ Contributor(s): .
                             <!--                            <link>http://www.softsmithy.org/lib/${dependency.softsmithy.version}/docs/site/softsmithy-lib-all/softsmithy-lib-all/apidocs/</link>-->
                             <link>https://docs.oracle.com/javase/8/javafx/api/</link>
                         </links>
+                        <docfilessubdirs>true</docfilessubdirs>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -516,6 +517,7 @@ Contributor(s): .
                         <!--<link>http://www.softsmithy.org/lib/${dependency.softsmithy.version}/docs/site/softsmithy-lib-all/softsmithy-lib-all/apidocs/</link>-->
                         <link>https://docs.oracle.com/javase/8/javafx/api/</link>
                     </links>
+                    <docfilessubdirs>true</docfilessubdirs>
                     <skip>${reporting.javadoc.skip}</skip>
                 </configuration>
             </plugin>
