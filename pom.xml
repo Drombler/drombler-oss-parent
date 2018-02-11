@@ -25,7 +25,7 @@ Contributor(s): .
     <groupId>org.drombler</groupId>
     <artifactId>drombler-oss-parent</artifactId>
     <packaging>pom</packaging>
-    <version>2.6</version>
+    <version>2.7</version>
     
     <name>Drombler OSS - Parent POM</name>
     <url>http://www.drombler.org</url>
@@ -86,7 +86,7 @@ Contributor(s): .
         <dependency.felix-scr.version>2.0.6</dependency.felix-scr.version>
         <dependency.felix-scr-annotations.version>1.12.0</dependency.felix-scr-annotations.version>
         <dependency.commons-lang3.version>3.5</dependency.commons-lang3.version>
-        <dependency.softsmithy.version>0.7</dependency.softsmithy.version>
+        <dependency.softsmithy.version>0.9</dependency.softsmithy.version>
         <dependency.junit.version>4.12</dependency.junit.version>
         <dependency.mockito.version>2.3.11</dependency.mockito.version>
         <dependency.slf4j.version>1.7.22</dependency.slf4j.version>
@@ -129,11 +129,12 @@ Contributor(s): .
                         <additionalparam>-javafx, -Xdoclint:accessibility, -Xdoclint:html, -Xdoclint:missing, -Xdoclint:reference</additionalparam>
                         <detectLinks>true</detectLinks>
                         <links>
-                            <link>http://docs.oracle.com/javaee/7/api/</link>
+                            <link>https://docs.oracle.com/javaee/7/api/</link>
                             <!-- TODO: needed?-->
                             <!--                            <link>http://www.softsmithy.org/lib/${dependency.softsmithy.version}/docs/site/softsmithy-lib-all/softsmithy-lib-all/apidocs/</link>-->
-                            <link>http://docs.oracle.com/javase/8/javafx/api/</link>
+                            <link>https://docs.oracle.com/javase/8/javafx/api/</link>
                         </links>
+                        <docfilessubdirs>true</docfilessubdirs>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -269,6 +270,11 @@ Contributor(s): .
             <dependency>
                 <groupId>org.softsmithy.lib</groupId>
                 <artifactId>softsmithy-lib-core</artifactId>
+                <version>${dependency.softsmithy.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.softsmithy.lib</groupId>
+                <artifactId>softsmithy-lib-compiler</artifactId>
                 <version>${dependency.softsmithy.version}</version>
             </dependency>
             <dependency>
@@ -506,11 +512,12 @@ Contributor(s): .
                     <additionalparam>-javafx, -Xdoclint:accessibility, -Xdoclint:html, -Xdoclint:missing, -Xdoclint:reference</additionalparam>
                     <detectLinks>true</detectLinks>
                     <links>
-                        <link>http://docs.oracle.com/javaee/7/api/</link>
+                        <link>https://docs.oracle.com/javaee/7/api/</link>
                         <!-- TODO: needed?-->
                         <!--<link>http://www.softsmithy.org/lib/${dependency.softsmithy.version}/docs/site/softsmithy-lib-all/softsmithy-lib-all/apidocs/</link>-->
-                        <link>http://docs.oracle.com/javase/8/javafx/api/</link>
+                        <link>https://docs.oracle.com/javase/8/javafx/api/</link>
                     </links>
+                    <docfilessubdirs>true</docfilessubdirs>
                     <skip>${reporting.javadoc.skip}</skip>
                 </configuration>
             </plugin>
