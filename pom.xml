@@ -126,7 +126,13 @@ Contributor(s): .
                         https://java.net/jira/browse/JAXB-1023
                         http://jira.codehaus.org/browse/MJAVADOC-368
                         http://jira.codehaus.org/browse/MJAVADOC-387-->
-                        <additionalparam>-javafx, -Xdoclint:accessibility, -Xdoclint:html, -Xdoclint:missing, -Xdoclint:reference</additionalparam>
+                        <additionalOptions>
+                            <additionalOption>-javafx</additionalOption>
+                            <additionalOption>-Xdoclint:accessibility</additionalOption>
+                            <additionalOption>-Xdoclint:html</additionalOption>
+                            <additionalOption>-Xdoclint:missing</additionalOption>
+                            <additionalOption>-Xdoclint:reference</additionalOption>
+                        </additionalOptions>
                         <detectLinks>true</detectLinks>
                         <links>
                             <link>https://docs.oracle.com/javaee/7/api/</link>
@@ -517,7 +523,13 @@ Contributor(s): .
                     https://java.net/jira/browse/JAXB-1023
                     http://jira.codehaus.org/browse/MJAVADOC-368
                     http://jira.codehaus.org/browse/MJAVADOC-387-->
-                    <additionalparam>-javafx, -Xdoclint:accessibility, -Xdoclint:html, -Xdoclint:missing, -Xdoclint:reference</additionalparam>
+                    <additionalOptions>
+                        <additionalOption>-javafx</additionalOption>
+                        <additionalOption>-Xdoclint:accessibility</additionalOption>
+                        <additionalOption>-Xdoclint:html</additionalOption>
+                        <additionalOption>-Xdoclint:missing</additionalOption>
+                        <additionalOption>-Xdoclint:reference</additionalOption>
+                    </additionalOptions>                    
                     <detectLinks>true</detectLinks>
                     <links>
                         <link>https://docs.oracle.com/javaee/7/api/</link>
