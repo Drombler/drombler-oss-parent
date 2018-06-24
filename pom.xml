@@ -25,7 +25,7 @@ Contributor(s): .
     <groupId>org.drombler</groupId>
     <artifactId>drombler-oss-parent</artifactId>
     <packaging>pom</packaging>
-    <version>2.11</version>
+    <version>3.0</version>
 
     <name>Drombler OSS - Parent POM</name>
     <url>http://www.drombler.org</url>
@@ -85,16 +85,15 @@ Contributor(s): .
         <dependency.felix-framework.version>5.6.6</dependency.felix-framework.version>
         <dependency.felix-scr.version>2.0.6</dependency.felix-scr.version>
         <dependency.felix-scr-annotations.version>1.12.0</dependency.felix-scr-annotations.version>
-        <dependency.commons-lang3.version>3.5</dependency.commons-lang3.version>
         <dependency.softsmithy.version>0.9</dependency.softsmithy.version>
-        <dependency.junit.version>4.12</dependency.junit.version>
-        <dependency.mockito.version>2.3.11</dependency.mockito.version>
-        <dependency.slf4j.version>1.7.22</dependency.slf4j.version>
         <dependency.maven-plugin-api.version>3.3.9</dependency.maven-plugin-api.version>
         <dependency.maven-plugin-annotations.version>3.5</dependency.maven-plugin-annotations.version>
         <dependency.maven-project.version>3.0-alpha-2</dependency.maven-project.version>
         <dependency.maven-jar-plugin.version>3.0.2</dependency.maven-jar-plugin.version>
         <dependency.maven-pax-plugin.version>1.6.0</dependency.maven-pax-plugin.version>
+        <spring-boot.version>2.0.2.RELEASE</spring-boot.version>
+        <!--<springfox-swagger.version>2.9.0</springfox-swagger.version>-->
+        <springfox-swagger.version>2.8.0</springfox-swagger.version>
 
         <!-- CDI dependency versions -->
         <!--        <dependency.pax-cdi.version>0.11.0</dependency.pax-cdi.version>
@@ -229,12 +228,43 @@ Contributor(s): .
                         </execution>
                     </executions>
                 </plugin>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring-boot.version}</version>
+                </plugin>
             </plugins>
         </pluginManagement>
     </build>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <!-- Import dependency management from Spring Boot -->
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+
+            <dependency>
+                <groupId>ch.sbb</groupId>
+                <artifactId>springboot-graceful-shutdown</artifactId>
+                <version>2.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${springfox-swagger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${springfox-swagger.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>org.osgi</groupId>
                 <artifactId>osgi.core</artifactId>
@@ -277,11 +307,6 @@ Contributor(s): .
                 </exclusions>
             </dependency>
             <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-lang3</artifactId>
-                <version>${dependency.commons-lang3.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>org.softsmithy.lib</groupId>
                 <artifactId>softsmithy-lib-core</artifactId>
                 <version>${dependency.softsmithy.version}</version>
@@ -305,26 +330,6 @@ Contributor(s): .
                 <groupId>org.softsmithy.devlib</groupId>
                 <artifactId>softsmithy-devlib-core</artifactId>
                 <version>${dependency.softsmithy.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>${dependency.junit.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.mockito</groupId>
-                <artifactId>mockito-core</artifactId>
-                <version>${dependency.mockito.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-api</artifactId>
-                <version>${dependency.slf4j.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-jdk14</artifactId>
-                <version>${dependency.slf4j.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.maven</groupId>
