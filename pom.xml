@@ -18,7 +18,7 @@ Contributor(s): .
     <parent>
         <groupId>org.softsmithy</groupId>
         <artifactId>softsmithy-parent</artifactId>
-        <version>3.5-SNAPSHOT</version>
+        <version>3.6-SNAPSHOT</version>
         <relativePath />
     </parent>
 
@@ -28,7 +28,7 @@ Contributor(s): .
     <version>3.2-SNAPSHOT</version>
 
     <name>Drombler OSS - Parent POM</name>
-    <url>http://www.drombler.org</url>
+    <url>https://www.drombler.org</url>
     <description>This Drombler OSS Parent POM should be the parent (either directly or indirectly) of every Drombler project unless there is a good reason to do otherwise (in which case the reason should be documented).</description>
     <inceptionYear>2012</inceptionYear>
     <organization>
@@ -52,7 +52,7 @@ Contributor(s): .
         <license>
             <name>COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0</name>
             <distribution>repo</distribution>
-            <!--<url>http://java.sun.com/spl.html</url>-->
+            <!--<url>https://opensource.org/licenses/CDDL-1.0</url>-->
             <url>LICENSE.txt</url>
         </license>
     </licenses>
@@ -85,7 +85,7 @@ Contributor(s): .
         <dependency.felix-framework.version>6.0.1</dependency.felix-framework.version>
         <dependency.felix-scr.version>2.1.8</dependency.felix-scr.version>
         <dependency.felix-scr-annotations.version>1.12.0</dependency.felix-scr-annotations.version>
-        <dependency.softsmithy.version>0.10-SNAPSHOT</dependency.softsmithy.version>
+        <dependency.softsmithy.version>1.1-SNAPSHOT</dependency.softsmithy.version>
         <dependency.maven-plugin-api.version>3.5.4</dependency.maven-plugin-api.version>
         <dependency.maven-plugin-annotations.version>3.5.2</dependency.maven-plugin-annotations.version>
         <dependency.maven-project.version>3.0-alpha-2</dependency.maven-project.version>
@@ -136,7 +136,7 @@ Contributor(s): .
                         <links>
                             <link>https://docs.oracle.com/javaee/7/api/</link>
                             <!-- TODO: needed?-->
-                            <!--                            <link>http://www.softsmithy.org/lib/${dependency.softsmithy.version}/docs/site/softsmithy-lib-all/softsmithy-lib-all/apidocs/</link>-->
+                            <!-- <link>https://www.softsmithy.org/lib/${dependency.softsmithy.version}/docs/site/softsmithy-lib-all/softsmithy-lib-all/apidocs/</link>-->
                             <link>https://docs.oracle.com/javase/8/javafx/api/</link>
                         </links>
                         <docfilessubdirs>true</docfilessubdirs>
@@ -188,7 +188,7 @@ Contributor(s): .
                     <configuration>
                         <!-- Attributes common to all output formats -->
                         <attributes>
-                            <endpoint-url>http://www.drombler.org</endpoint-url>
+                            <endpoint-url>https://www.drombler.org</endpoint-url>
                             <sourcedir>${project.build.sourceDirectory}</sourcedir>
                             <resourcesdir>${basedir}/src/main/resources</resourcesdir>
                             <project-version>${project.version}</project-version>
@@ -313,28 +313,10 @@ Contributor(s): .
             </dependency>
             <dependency>
                 <groupId>org.softsmithy.lib</groupId>
-                <artifactId>softsmithy-lib-core</artifactId>
+                <artifactId>softsmithy-lib</artifactId>
                 <version>${dependency.softsmithy.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.softsmithy.lib</groupId>
-                <artifactId>softsmithy-lib-compiler</artifactId>
-                <version>${dependency.softsmithy.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.softsmithy.lib</groupId>
-                <artifactId>softsmithy-lib-beans</artifactId>
-                <version>${dependency.softsmithy.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.softsmithy.lib</groupId>
-                <artifactId>softsmithy-lib-time</artifactId>
-                <version>${dependency.softsmithy.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.softsmithy.devlib</groupId>
-                <artifactId>softsmithy-devlib-core</artifactId>
-                <version>${dependency.softsmithy.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
             </dependency>
             <dependency>
                 <groupId>org.apache.maven</groupId>
@@ -550,7 +532,7 @@ Contributor(s): .
                     <links>
                         <link>https://docs.oracle.com/javaee/7/api/</link>
                         <!-- TODO: needed?-->
-                        <!--<link>http://www.softsmithy.org/lib/${dependency.softsmithy.version}/docs/site/softsmithy-lib-all/softsmithy-lib-all/apidocs/</link>-->
+                        <!--<link>https://www.softsmithy.org/lib/${dependency.softsmithy.version}/docs/site/softsmithy-lib-all/softsmithy-lib-all/apidocs/</link>-->
                         <link>https://docs.oracle.com/javase/8/javafx/api/</link>
                     </links>
                     <docfilessubdirs>true</docfilessubdirs>
