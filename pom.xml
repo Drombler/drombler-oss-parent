@@ -85,14 +85,14 @@ Contributor(s): .
         <dependency.felix-framework.version>6.0.1</dependency.felix-framework.version>
         <dependency.felix-scr.version>2.1.8</dependency.felix-scr.version>
         <dependency.felix-scr-annotations.version>1.12.0</dependency.felix-scr-annotations.version>
-        <dependency.softsmithy.version>1.1-SNAPSHOT</dependency.softsmithy.version>
+        <dependency.softsmithy.version>2.0-SNAPSHOT</dependency.softsmithy.version>
         <dependency.maven-plugin-api.version>3.5.4</dependency.maven-plugin-api.version>
         <dependency.maven-plugin-annotations.version>3.5.2</dependency.maven-plugin-annotations.version>
         <dependency.maven-project.version>3.0-alpha-2</dependency.maven-project.version>
         <dependency.maven-jar-plugin.version>3.1.0</dependency.maven-jar-plugin.version>
         <dependency.maven-dependency-plugin.version>3.1.1</dependency.maven-dependency-plugin.version>
         <dependency.maven-pax-plugin.version>1.6.0</dependency.maven-pax-plugin.version>
-        <spring-boot.version>2.0.5.RELEASE</spring-boot.version>
+        <spring-boot.version>2.1.0.RELEASE</spring-boot.version>
         <springfox-swagger.version>2.9.2</springfox-swagger.version>
 
         <!-- CDI dependency versions -->
