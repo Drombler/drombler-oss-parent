@@ -69,6 +69,9 @@ Contributor(s): .
         <jaxb.locale>en</jaxb.locale>
         <dollar>$</dollar>
 
+        <docker-sources.outputDirectory>${project.build.directory}/docker-sources</docker-sources.outputDirectory>
+        <docker.image.prefix>drombler</docker.image.prefix>
+
         <!-- Plugin Versions Defaults -->
         <plugin.exec.version>1.6.0</plugin.exec.version>
         <plugin.jaxb.version>0.14.0</plugin.jaxb.version>
@@ -237,6 +240,24 @@ Contributor(s): .
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
                     <version>${spring-boot.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>com.spotify</groupId>
+                    <artifactId>dockerfile-maven-plugin</artifactId>
+                    <version>1.4.9</version>
+                    <executions>
+                        <execution>
+                            <id>default</id>
+                            <goals>
+                                <goal>build</goal>
+                                <goal>push</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <tag>${project.version}</tag>
+                        <contextDirectory>${docker-sources.outputDirectory}</contextDirectory>
+                    </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>
