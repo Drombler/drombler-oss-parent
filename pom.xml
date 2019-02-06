@@ -69,6 +69,9 @@ Contributor(s): .
         <jaxb.locale>en</jaxb.locale>
         <dollar>$</dollar>
 
+        <docker-sources.outputDirectory>${project.build.directory}/docker-sources</docker-sources.outputDirectory>
+        <docker.image.prefix>drombler</docker.image.prefix>
+
         <!-- Plugin Versions Defaults -->
         <plugin.exec.version>1.6.0</plugin.exec.version>
         <plugin.jaxb.version>0.14.0</plugin.jaxb.version>
@@ -92,8 +95,10 @@ Contributor(s): .
         <dependency.maven-jar-plugin.version>3.1.0</dependency.maven-jar-plugin.version>
         <dependency.maven-dependency-plugin.version>3.1.1</dependency.maven-dependency-plugin.version>
         <dependency.maven-pax-plugin.version>1.6.0</dependency.maven-pax-plugin.version>
+        <dependency.keycloak.version>4.8.3.Final</dependency.keycloak.version>
+        <dependency.springfox-swagger.version>2.9.2</dependency.springfox-swagger.version>
+        
         <spring-boot.version>2.1.0.RELEASE</spring-boot.version>
-        <springfox-swagger.version>2.9.2</springfox-swagger.version>
 
         <!-- CDI dependency versions -->
         <!--        <dependency.pax-cdi.version>0.11.0</dependency.pax-cdi.version>
@@ -238,6 +243,24 @@ Contributor(s): .
                     <artifactId>spring-boot-maven-plugin</artifactId>
                     <version>${spring-boot.version}</version>
                 </plugin>
+                <plugin>
+                    <groupId>com.spotify</groupId>
+                    <artifactId>dockerfile-maven-plugin</artifactId>
+                    <version>1.4.9</version>
+                    <executions>
+                        <execution>
+                            <id>default</id>
+                            <goals>
+                                <goal>build</goal>
+                                <goal>push</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <tag>${project.version}</tag>
+                        <contextDirectory>${docker-sources.outputDirectory}</contextDirectory>
+                    </configuration>
+                </plugin>
             </plugins>
         </pluginManagement>
     </build>
@@ -254,6 +277,14 @@ Contributor(s): .
             </dependency>
 
             <dependency>
+                <groupId>org.keycloak.bom</groupId>
+                <artifactId>keycloak-adapter-bom</artifactId>
+                <version>${dependency.keycloak.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+    
+            <dependency>
                 <groupId>ch.sbb</groupId>
                 <artifactId>springboot-graceful-shutdown</artifactId>
                 <version>2.0</version>
@@ -262,12 +293,12 @@ Contributor(s): .
             <dependency>
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger2</artifactId>
-                <version>${springfox-swagger.version}</version>
+                <version>${dependency.springfox-swagger.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger-ui</artifactId>
-                <version>${springfox-swagger.version}</version>
+                <version>${dependency.springfox-swagger.version}</version>
             </dependency>
 
             <dependency>
