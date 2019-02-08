@@ -18,17 +18,17 @@ Contributor(s): .
     <parent>
         <groupId>org.softsmithy</groupId>
         <artifactId>softsmithy-parent</artifactId>
-        <version>3.4</version>
+        <version>3.6</version>
         <relativePath />
     </parent>
 
     <groupId>org.drombler</groupId>
     <artifactId>drombler-oss-parent</artifactId>
     <packaging>pom</packaging>
-    <version>3.1</version>
+    <version>3.2</version>
 
     <name>Drombler OSS - Parent POM</name>
-    <url>http://www.drombler.org</url>
+    <url>https://www.drombler.org</url>
     <description>This Drombler OSS Parent POM should be the parent (either directly or indirectly) of every Drombler project unless there is a good reason to do otherwise (in which case the reason should be documented).</description>
     <inceptionYear>2012</inceptionYear>
     <organization>
@@ -44,15 +44,15 @@ Contributor(s): .
     </scm>
 
     <issueManagement>
-        <system>SourceForge.net</system>
-        <url>http://sourceforge.net/p/drombler/tickets/</url>
+        <system>GitHub</system>
+        <url>https://github.com/Drombler/drombler-fx/issues</url>
     </issueManagement>
 
     <licenses>
         <license>
             <name>COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0</name>
             <distribution>repo</distribution>
-            <!--<url>http://java.sun.com/spl.html</url>-->
+            <!--<url>https://opensource.org/licenses/CDDL-1.0</url>-->
             <url>LICENSE.txt</url>
         </license>
     </licenses>
@@ -69,32 +69,36 @@ Contributor(s): .
         <jaxb.locale>en</jaxb.locale>
         <dollar>$</dollar>
 
+        <docker-sources.outputDirectory>${project.build.directory}/docker-sources</docker-sources.outputDirectory>
+        <docker.image.prefix>drombler</docker.image.prefix>
+
         <!-- Plugin Versions Defaults -->
-        <plugin.exec.version>1.5.0</plugin.exec.version>
-        <plugin.jaxb.version>0.13.1</plugin.jaxb.version>
-        <plugin.felix-scr.version>1.23.0</plugin.felix-scr.version>
-        <plugin.plugin-plugin.version>3.4</plugin.plugin-plugin.version>
-        <plugin.asciidoctor.version>1.5.3</plugin.asciidoctor.version>
-        <plugin.versions.version>2.3</plugin.versions.version>
+        <plugin.exec.version>1.6.0</plugin.exec.version>
+        <plugin.jaxb.version>0.14.0</plugin.jaxb.version>
+        <plugin.felix-scr.version>1.26.0</plugin.felix-scr.version>
+        <plugin.plugin-plugin.version>3.5.2</plugin.plugin-plugin.version>
+        <plugin.asciidoctor.version>1.5.7</plugin.asciidoctor.version>
+        <plugin.versions.version>2.7</plugin.versions.version>
 
         <!-- Dependency Versions Defaults -->
-        <dependency.osgi-core.version>6.0.0</dependency.osgi-core.version>
-        <dependency.osgi-compendium.version>5.0.0</dependency.osgi-compendium.version>
-        <dependency.osgi-service-component-annotations.version>1.3.0</dependency.osgi-service-component-annotations.version>
-        <dependency.felix-configadmin.version>1.8.16</dependency.felix-configadmin.version>
-        <dependency.felix-framework.version>5.6.6</dependency.felix-framework.version>
-        <dependency.felix-scr.version>2.0.6</dependency.felix-scr.version>
+        <dependency.osgi-core.version>7.0.0</dependency.osgi-core.version>
+        <dependency.osgi-compendium.version>7.0.0</dependency.osgi-compendium.version>
+        <dependency.osgi-service-component-annotations.version>1.4.0</dependency.osgi-service-component-annotations.version>
+        <dependency.felix-configadmin.version>1.9.6</dependency.felix-configadmin.version>
+        <dependency.felix-framework.version>6.0.1</dependency.felix-framework.version>
+        <dependency.felix-scr.version>2.1.8</dependency.felix-scr.version>
         <dependency.felix-scr-annotations.version>1.12.0</dependency.felix-scr-annotations.version>
-        <dependency.softsmithy.version>0.9</dependency.softsmithy.version>
-        <dependency.maven-plugin-api.version>3.3.9</dependency.maven-plugin-api.version>
-        <dependency.maven-plugin-annotations.version>3.5</dependency.maven-plugin-annotations.version>
+        <dependency.softsmithy.version>2.0</dependency.softsmithy.version>
+        <dependency.maven-plugin-api.version>3.5.4</dependency.maven-plugin-api.version>
+        <dependency.maven-plugin-annotations.version>3.5.2</dependency.maven-plugin-annotations.version>
         <dependency.maven-project.version>3.0-alpha-2</dependency.maven-project.version>
-        <dependency.maven-jar-plugin.version>3.0.2</dependency.maven-jar-plugin.version>
+        <dependency.maven-jar-plugin.version>3.1.0</dependency.maven-jar-plugin.version>
+        <dependency.maven-dependency-plugin.version>3.1.1</dependency.maven-dependency-plugin.version>
         <dependency.maven-pax-plugin.version>1.6.0</dependency.maven-pax-plugin.version>
-        <spring-boot.version>2.0.3.RELEASE</spring-boot.version>
-        <springfox-swagger.version>2.9.2</springfox-swagger.version>
-        <jackson.version.annotations>2.9.6
-        </jackson.version.annotations> <!-- overrides Spring Boot / Jackson BOM managed version v2.9.0 -->
+        <dependency.keycloak.version>4.8.3.Final</dependency.keycloak.version>
+        <dependency.springfox-swagger.version>2.9.2</dependency.springfox-swagger.version>
+        
+        <spring-boot.version>2.1.0.RELEASE</spring-boot.version>
 
         <!-- CDI dependency versions -->
         <!--        <dependency.pax-cdi.version>0.11.0</dependency.pax-cdi.version>
@@ -137,11 +141,16 @@ Contributor(s): .
                         <links>
                             <link>https://docs.oracle.com/javaee/7/api/</link>
                             <!-- TODO: needed?-->
-                            <!--                            <link>http://www.softsmithy.org/lib/${dependency.softsmithy.version}/docs/site/softsmithy-lib-all/softsmithy-lib-all/apidocs/</link>-->
+                            <!-- <link>https://www.softsmithy.org/lib/${dependency.softsmithy.version}/docs/site/softsmithy-lib-all/softsmithy-lib-all/apidocs/</link>-->
                             <link>https://docs.oracle.com/javase/8/javafx/api/</link>
                         </links>
                         <docfilessubdirs>true</docfilessubdirs>
                     </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-plugin-plugin</artifactId>
+                    <version>${plugin.plugin-plugin.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
@@ -172,7 +181,7 @@ Contributor(s): .
                 <plugin>
                     <groupId>org.jsonschema2pojo</groupId>
                     <artifactId>jsonschema2pojo-maven-plugin</artifactId>
-                    <version>1.0.0-alpha2</version>
+                    <version>1.0.0-beta1</version>
                     <configuration>
                         <outputDirectory>${project.build.directory}/generated-sources/jsonschema2pojo</outputDirectory>
                     </configuration>
@@ -184,7 +193,7 @@ Contributor(s): .
                     <configuration>
                         <!-- Attributes common to all output formats -->
                         <attributes>
-                            <endpoint-url>http://www.drombler.org</endpoint-url>
+                            <endpoint-url>https://www.drombler.org</endpoint-url>
                             <sourcedir>${project.build.sourceDirectory}</sourcedir>
                             <resourcesdir>${basedir}/src/main/resources</resourcesdir>
                             <project-version>${project.version}</project-version>
@@ -234,17 +243,30 @@ Contributor(s): .
                     <artifactId>spring-boot-maven-plugin</artifactId>
                     <version>${spring-boot.version}</version>
                 </plugin>
+                <plugin>
+                    <groupId>com.spotify</groupId>
+                    <artifactId>dockerfile-maven-plugin</artifactId>
+                    <version>1.4.9</version>
+                    <executions>
+                        <execution>
+                            <id>default</id>
+                            <goals>
+                                <goal>build</goal>
+                                <goal>push</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <tag>${project.version}</tag>
+                        <contextDirectory>${docker-sources.outputDirectory}</contextDirectory>
+                    </configuration>
+                </plugin>
             </plugins>
         </pluginManagement>
     </build>
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>com.fasterxml.jackson.core</groupId>
-                <artifactId>jackson-annotations</artifactId>
-                <version>${jackson.version.annotations}</version>
-            </dependency>
             <dependency>
                 <!-- Import dependency management from Spring Boot -->
                 <groupId>org.springframework.boot</groupId>
@@ -255,6 +277,14 @@ Contributor(s): .
             </dependency>
 
             <dependency>
+                <groupId>org.keycloak.bom</groupId>
+                <artifactId>keycloak-adapter-bom</artifactId>
+                <version>${dependency.keycloak.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+    
+            <dependency>
                 <groupId>ch.sbb</groupId>
                 <artifactId>springboot-graceful-shutdown</artifactId>
                 <version>2.0</version>
@@ -263,12 +293,12 @@ Contributor(s): .
             <dependency>
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger2</artifactId>
-                <version>${springfox-swagger.version}</version>
+                <version>${dependency.springfox-swagger.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger-ui</artifactId>
-                <version>${springfox-swagger.version}</version>
+                <version>${dependency.springfox-swagger.version}</version>
             </dependency>
 
             <dependency>
@@ -278,7 +308,7 @@ Contributor(s): .
             </dependency>
             <dependency>
                 <groupId>org.osgi</groupId>
-                <artifactId>org.osgi.compendium</artifactId>
+                <artifactId>osgi.cmpn</artifactId>
                 <version>${dependency.osgi-compendium.version}</version>
             </dependency>
             <dependency>
@@ -314,28 +344,10 @@ Contributor(s): .
             </dependency>
             <dependency>
                 <groupId>org.softsmithy.lib</groupId>
-                <artifactId>softsmithy-lib-core</artifactId>
+                <artifactId>softsmithy-lib</artifactId>
                 <version>${dependency.softsmithy.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.softsmithy.lib</groupId>
-                <artifactId>softsmithy-lib-compiler</artifactId>
-                <version>${dependency.softsmithy.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.softsmithy.lib</groupId>
-                <artifactId>softsmithy-lib-beans</artifactId>
-                <version>${dependency.softsmithy.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.softsmithy.lib</groupId>
-                <artifactId>softsmithy-lib-time</artifactId>
-                <version>${dependency.softsmithy.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.softsmithy.devlib</groupId>
-                <artifactId>softsmithy-devlib-core</artifactId>
-                <version>${dependency.softsmithy.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
             </dependency>
             <dependency>
                 <groupId>org.apache.maven</groupId>
@@ -355,9 +367,15 @@ Contributor(s): .
             <dependency>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <type>maven-plugin</type>
                 <version>${dependency.maven-jar-plugin.version}</version>
+                <type>maven-plugin</type>
             </dependency>
+            <dependency>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>${dependency.maven-dependency-plugin.version}</version>
+                <type>maven-plugin</type>
+            </dependency>     
             <dependency>
                 <groupId>org.ops4j</groupId>
                 <artifactId>maven-pax-plugin</artifactId>
@@ -545,7 +563,7 @@ Contributor(s): .
                     <links>
                         <link>https://docs.oracle.com/javaee/7/api/</link>
                         <!-- TODO: needed?-->
-                        <!--<link>http://www.softsmithy.org/lib/${dependency.softsmithy.version}/docs/site/softsmithy-lib-all/softsmithy-lib-all/apidocs/</link>-->
+                        <!--<link>https://www.softsmithy.org/lib/${dependency.softsmithy.version}/docs/site/softsmithy-lib-all/softsmithy-lib-all/apidocs/</link>-->
                         <link>https://docs.oracle.com/javase/8/javafx/api/</link>
                     </links>
                     <docfilessubdirs>true</docfilessubdirs>
