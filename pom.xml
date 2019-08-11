@@ -64,8 +64,8 @@ Contributor(s): .
 
         <!-- TODO: consider to support  -Xdoclint:all -->
         <java.compiler.compilerArgument>-Xlint:all,-serial</java.compiler.compilerArgument>
-        <excludePackageNames>*.internal.*:*.impl.*</excludePackageNames> <!-- used by Javadoc plugin --><!-- TODO: get this from OSGi meta data-->
-        <excludePackageNamesAggregate>${excludePackageNames}:*.maven.plugin.*:*.samples.*:tutorial.*</excludePackageNamesAggregate>
+        <excludePackageNames>*.internal:*.internal.*:*.impl:*.impl.*</excludePackageNames> <!-- used by Javadoc plugin --><!-- TODO: get this from OSGi meta data-->
+        <excludePackageNamesAggregate>${excludePackageNames}:*.maven.plugin:*.maven.plugin.*:*.samples:*.samples.*:tutorial:tutorial.*</excludePackageNamesAggregate>
         <jaxb.locale>en</jaxb.locale>
         <dollar>$</dollar>
 
