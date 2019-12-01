@@ -18,7 +18,7 @@ Contributor(s): .
     <parent>
         <groupId>org.softsmithy</groupId>
         <artifactId>softsmithy-parent</artifactId>
-        <version>3.7-SNAPSHOT</version>
+        <version>3.7</version>
         <relativePath />
     </parent>
 
@@ -88,7 +88,7 @@ Contributor(s): .
         <dependency.felix-framework.version>6.0.3</dependency.felix-framework.version>
         <dependency.felix-scr.version>2.1.8</dependency.felix-scr.version>
         <dependency.felix-scr-annotations.version>1.12.0</dependency.felix-scr-annotations.version>
-        <dependency.softsmithy.version>2.1-SNAPSHOT</dependency.softsmithy.version>
+        <dependency.softsmithy.version>2.1</dependency.softsmithy.version>
         <dependency.maven-plugin-api.version>3.5.4</dependency.maven-plugin-api.version>
         <dependency.maven-plugin-annotations.version>3.5.2</dependency.maven-plugin-annotations.version>
         <dependency.maven-project.version>3.0-alpha-2</dependency.maven-project.version>
@@ -98,7 +98,7 @@ Contributor(s): .
         <dependency.keycloak.version>4.8.3.Final</dependency.keycloak.version>
         <dependency.springfox-swagger.version>2.9.2</dependency.springfox-swagger.version>
         
-        <spring-boot.version>2.1.6.RELEASE</spring-boot.version>
+        <spring-boot.version>2.1.10.RELEASE</spring-boot.version>
 
         <!-- CDI dependency versions -->
         <!--        <dependency.pax-cdi.version>0.11.0</dependency.pax-cdi.version>
