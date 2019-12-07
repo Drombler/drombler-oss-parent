@@ -25,7 +25,7 @@ Contributor(s): .
     <groupId>org.drombler</groupId>
     <artifactId>drombler-oss-parent</artifactId>
     <packaging>pom</packaging>
-    <version>3.3</version>
+    <version>3.3.1</version>
 
     <name>Drombler OSS - Parent POM</name>
     <url>https://www.drombler.org</url>
@@ -88,7 +88,7 @@ Contributor(s): .
         <dependency.felix-framework.version>6.0.3</dependency.felix-framework.version>
         <dependency.felix-scr.version>2.1.8</dependency.felix-scr.version>
         <dependency.felix-scr-annotations.version>1.12.0</dependency.felix-scr-annotations.version>
-        <dependency.softsmithy.version>2.1</dependency.softsmithy.version>
+        <dependency.softsmithy.version>2.1.1</dependency.softsmithy.version>
         <dependency.maven-plugin-api.version>3.5.4</dependency.maven-plugin-api.version>
         <dependency.maven-plugin-annotations.version>3.5.2</dependency.maven-plugin-annotations.version>
         <dependency.maven-project.version>3.0-alpha-2</dependency.maven-project.version>
