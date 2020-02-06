@@ -75,7 +75,6 @@ Contributor(s): .
         <!-- Plugin Versions Defaults -->
         <plugin.exec.version>1.6.0</plugin.exec.version>
         <plugin.jaxb.version>0.14.0</plugin.jaxb.version>
-        <plugin.felix-scr.version>1.26.0</plugin.felix-scr.version>
         <plugin.plugin-plugin.version>3.5.2</plugin.plugin-plugin.version>
         <plugin.asciidoctor.version>1.6.0</plugin.asciidoctor.version>
         <plugin.versions.version>2.7</plugin.versions.version>

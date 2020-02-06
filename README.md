@@ -2,6 +2,9 @@
 This Drombler OSS Parent POM should be the parent (either directly or indirectly) of every Drombler project unless there
  is a good reason to do otherwise (in which case the reason should be documented).
  
+| Major Version | Comments |
+| ------------- | ------- |
+| v4 | <ul><li>Java SE 11</li></ul> |
  
 ## Build the project from sources
 ```bash
