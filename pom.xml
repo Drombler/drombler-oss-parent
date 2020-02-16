@@ -81,7 +81,7 @@ Contributor(s): .
         <plugin.javafx.version>0.0.3</plugin.javafx.version>
 
         <!-- Dependency Versions Defaults -->
-        <dependency.javafx.version>11.0.1</dependency.javafx.version>
+        <dependency.javafx.version>11.0.2</dependency.javafx.version>
         <dependency.osgi-core.version>7.0.0</dependency.osgi-core.version>
         <dependency.osgi-compendium.version>7.0.0</dependency.osgi-compendium.version>
         <dependency.felix-configadmin.version>1.9.16</dependency.felix-configadmin.version>
@@ -135,12 +135,16 @@ Contributor(s): .
                             <additionalOption>-Xdoclint:missing</additionalOption>
                             <additionalOption>-Xdoclint:reference</additionalOption>
                         </additionalOptions>
+                        <!--                        <additionalJOptions>
+                            <additionalJOption>-J-Dhttp.agent=maven-javadoc-plugin-${pom‌​.artifactId}</additionalJOption>
+                        </additionalJOptions>-->
                         <detectLinks>true</detectLinks>
                         <links>
                             <link>https://jakarta.ee/specifications/platform/8/apidocs/</link>
                             <!-- TODO: needed?-->
                             <!-- <link>https://www.softsmithy.org/lib/${dependency.softsmithy.version}/docs/site/softsmithy-lib-all/softsmithy-lib-all/apidocs/</link>-->
-                            <link>https://openjfx.io/javadoc/11/</link>
+                            <!--<link>https://openjfx.io/javadoc/11/</link>-->
+                            <link>https://docs.spring.io/spring-boot/docs/2.2.4.RELEASE/api/</link>
                         </links>
                         <docfilessubdirs>true</docfilessubdirs>
                     </configuration>
@@ -718,7 +722,8 @@ Contributor(s): .
                         <link>https://jakarta.ee/specifications/platform/8/apidocs/</link>
                         <!-- TODO: needed?-->
                         <!--<link>https://www.softsmithy.org/lib/${dependency.softsmithy.version}/docs/site/softsmithy-lib-all/softsmithy-lib-all/apidocs/</link>-->
-                        <link>https://openjfx.io/javadoc/11/</link>
+                        <!--<link>https://openjfx.io/javadoc/11/</link>-->
+                        <link>https://docs.spring.io/spring-boot/docs/2.2.4.RELEASE/api/</link>
                     </links>
                     <docfilessubdirs>true</docfilessubdirs>
                     <skip>${reporting.javadoc.skip}</skip>
