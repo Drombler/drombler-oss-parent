@@ -82,6 +82,7 @@ Contributor(s): .
 
         <!-- Dependency Versions Defaults -->
         <dependency.javafx.version>11.0.2</dependency.javafx.version>
+        <dependency.jaxb-osgi>2.3.3</dependency.jaxb-osgi>
         <dependency.osgi-core.version>7.0.0</dependency.osgi-core.version>
         <dependency.osgi-compendium.version>7.0.0</dependency.osgi-compendium.version>
         <dependency.felix-configadmin.version>1.9.16</dependency.felix-configadmin.version>
@@ -96,7 +97,7 @@ Contributor(s): .
         <dependency.keycloak.version>4.8.3.Final</dependency.keycloak.version>
         <dependency.springfox-swagger.version>2.9.2</dependency.springfox-swagger.version>
         
-        <spring-boot.version>2.2.4.RELEASE</spring-boot.version>
+        <spring-boot.version>2.2.7.RELEASE</spring-boot.version>
 
         <!-- CDI dependency versions -->
         <!--        <dependency.pax-cdi.version>0.11.0</dependency.pax-cdi.version>
@@ -471,6 +472,12 @@ Contributor(s): .
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger-ui</artifactId>
                 <version>${dependency.springfox-swagger.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sun.xml.bind</groupId>
+                <artifactId>jaxb-osgi</artifactId>
+                <version>${dependency.jaxb-osgi}</version>
             </dependency>
 
             <dependency>
