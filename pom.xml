@@ -75,7 +75,7 @@ Contributor(s): .
         <!-- Plugin Versions Defaults -->
         <plugin.exec.version>1.6.0</plugin.exec.version>
         <plugin.jaxb.version>0.14.0</plugin.jaxb.version>
-        <plugin.plugin-plugin.version>3.5.2</plugin.plugin-plugin.version>
+        <plugin.plugin-plugin.version>3.6.0</plugin.plugin-plugin.version>
         <plugin.asciidoctor.version>1.6.0</plugin.asciidoctor.version>
         <plugin.versions.version>2.7</plugin.versions.version>
         <plugin.javafx.version>0.0.3</plugin.javafx.version>
@@ -92,7 +92,7 @@ Contributor(s): .
         <dependency.maven-plugin-annotations.version>3.6.0</dependency.maven-plugin-annotations.version>
         <dependency.maven-project.version>3.0-alpha-2</dependency.maven-project.version>
         <dependency.maven-jar-plugin.version>3.2.0</dependency.maven-jar-plugin.version>
-        <dependency.maven-dependency-plugin.version>3.1.1</dependency.maven-dependency-plugin.version>
+        <dependency.maven-dependency-plugin.version>3.1.2</dependency.maven-dependency-plugin.version>
         <dependency.maven-pax-plugin.version>1.6.0</dependency.maven-pax-plugin.version>
         <dependency.keycloak.version>4.8.3.Final</dependency.keycloak.version>
         <dependency.springfox-swagger.version>2.9.2</dependency.springfox-swagger.version>
