@@ -272,168 +272,168 @@ Contributor(s): .
         <dependencies>
             <!-- JavaFX Dependencies -->
             <dependency>
-                <groupId>org.javafx</groupId>
+                <groupId>org.openjfx</groupId>
                 <artifactId>javafx-web</artifactId>
                 <version>${dependency.javafx.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.javafx</groupId>
+                <groupId>org.openjfx</groupId>
                 <artifactId>javafx-web</artifactId>
                 <classifier>linux</classifier>
                 <version>${dependency.javafx.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.javafx</groupId>
+                <groupId>org.openjfx</groupId>
                 <artifactId>javafx-web</artifactId>
                 <classifier>mac</classifier>
                 <version>${dependency.javafx.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.javafx</groupId>
+                <groupId>org.openjfx</groupId>
                 <artifactId>javafx-web</artifactId>
                 <classifier>win</classifier>
                 <version>${dependency.javafx.version}</version>
             </dependency>
             
             <dependency>
-                <groupId>org.javafx</groupId>
+                <groupId>org.openjfx</groupId>
                 <artifactId>javafx-swing</artifactId>
                 <version>${dependency.javafx.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.javafx</groupId>
+                <groupId>org.openjfx</groupId>
                 <artifactId>javafx-swing</artifactId>
                 <classifier>linux</classifier>
                 <version>${dependency.javafx.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.javafx</groupId>
+                <groupId>org.openjfx</groupId>
                 <artifactId>javafx-swing</artifactId>
                 <classifier>mac</classifier>
                 <version>${dependency.javafx.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.javafx</groupId>
+                <groupId>org.openjfx</groupId>
                 <artifactId>javafx-swing</artifactId>
                 <classifier>win</classifier>
                 <version>${dependency.javafx.version}</version>
             </dependency>
             
             <dependency>
-                <groupId>org.javafx</groupId>
+                <groupId>org.openjfx</groupId>
                 <artifactId>javafx-media</artifactId>
                 <version>${dependency.javafx.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.javafx</groupId>
+                <groupId>org.openjfx</groupId>
                 <artifactId>javafx-media</artifactId>
                 <classifier>linux</classifier>
                 <version>${dependency.javafx.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.javafx</groupId>
+                <groupId>org.openjfx</groupId>
                 <artifactId>javafx-media</artifactId>
                 <classifier>mac</classifier>
                 <version>${dependency.javafx.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.javafx</groupId>
+                <groupId>org.openjfx</groupId>
                 <artifactId>javafx-media</artifactId>
                 <classifier>win</classifier>
                 <version>${dependency.javafx.version}</version>
             </dependency>
             
             <dependency>
-                <groupId>org.javafx</groupId>
+                <groupId>org.openjfx</groupId>
                 <artifactId>javafx-graphics</artifactId>
                 <version>${dependency.javafx.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.javafx</groupId>
+                <groupId>org.openjfx</groupId>
                 <artifactId>javafx-graphics</artifactId>
                 <classifier>linux</classifier>
                 <version>${dependency.javafx.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.javafx</groupId>
+                <groupId>org.openjfx</groupId>
                 <artifactId>javafx-graphics</artifactId>
                 <classifier>mac</classifier>
                 <version>${dependency.javafx.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.javafx</groupId>
+                <groupId>org.openjfx</groupId>
                 <artifactId>javafx-graphics</artifactId>
                 <classifier>win</classifier>
                 <version>${dependency.javafx.version}</version>
             </dependency>
             
             <dependency>
-                <groupId>org.javafx</groupId>
+                <groupId>org.openjfx</groupId>
                 <artifactId>javafx-fxml</artifactId>
                 <version>${dependency.javafx.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.javafx</groupId>
+                <groupId>org.openjfx</groupId>
                 <artifactId>javafx-fxml</artifactId>
                 <classifier>linux</classifier>
                 <version>${dependency.javafx.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.javafx</groupId>
+                <groupId>org.openjfx</groupId>
                 <artifactId>javafx-fxml</artifactId>
                 <classifier>mac</classifier>
                 <version>${dependency.javafx.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.javafx</groupId>
+                <groupId>org.openjfx</groupId>
                 <artifactId>javafx-fxml</artifactId>
                 <classifier>win</classifier>
                 <version>${dependency.javafx.version}</version>
             </dependency>
             
             <dependency>
-                <groupId>org.javafx</groupId>
-                <artifactId>javafx-constrols</artifactId>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-controls</artifactId>
                 <version>${dependency.javafx.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.javafx</groupId>
-                <artifactId>javafx-constrols</artifactId>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-controls</artifactId>
                 <classifier>linux</classifier>
                 <version>${dependency.javafx.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.javafx</groupId>
-                <artifactId>javafx-constrols</artifactId>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-controls</artifactId>
                 <classifier>mac</classifier>
                 <version>${dependency.javafx.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.javafx</groupId>
-                <artifactId>javafx-constrols</artifactId>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-controls</artifactId>
                 <classifier>win</classifier>
                 <version>${dependency.javafx.version}</version>
             </dependency>
             
             <dependency>
-                <groupId>org.javafx</groupId>
+                <groupId>org.openjfx</groupId>
                 <artifactId>javafx-base</artifactId>
                 <version>${dependency.javafx.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.javafx</groupId>
+                <groupId>org.openjfx</groupId>
                 <artifactId>javafx-base</artifactId>
                 <classifier>linux</classifier>
                 <version>${dependency.javafx.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.javafx</groupId>
+                <groupId>org.openjfx</groupId>
                 <artifactId>javafx-base</artifactId>
                 <classifier>mac</classifier>
                 <version>${dependency.javafx.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.javafx</groupId>
+                <groupId>org.openjfx</groupId>
                 <artifactId>javafx-base</artifactId>
                 <classifier>win</classifier>
                 <version>${dependency.javafx.version}</version>
