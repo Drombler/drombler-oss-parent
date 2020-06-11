@@ -18,7 +18,7 @@ Contributor(s): .
     <parent>
         <groupId>org.softsmithy</groupId>
         <artifactId>softsmithy-parent</artifactId>
-        <version>4.0</version>
+        <version>4.1.0-SNAPSHOT</version>
         <relativePath />
     </parent>
 
@@ -97,7 +97,7 @@ Contributor(s): .
         <dependency.keycloak.version>4.8.3.Final</dependency.keycloak.version>
         <dependency.springfox-swagger.version>2.9.2</dependency.springfox-swagger.version>
         
-        <spring-boot.version>2.2.7.RELEASE</spring-boot.version>
+        <spring-boot.version>2.3.0.RELEASE</spring-boot.version>
 
         <!-- CDI dependency versions -->
         <!--        <dependency.pax-cdi.version>0.11.0</dependency.pax-cdi.version>
@@ -145,7 +145,7 @@ Contributor(s): .
                             <!-- TODO: needed?-->
                             <!-- <link>https://www.softsmithy.org/lib/${dependency.softsmithy.version}/docs/site/softsmithy-lib-all/softsmithy-lib-all/apidocs/</link>-->
                             <!--<link>https://openjfx.io/javadoc/11/</link>-->
-                            <link>https://docs.spring.io/spring-boot/docs/2.2.4.RELEASE/api/</link>
+                            <link>https://docs.spring.io/spring-boot/docs/2.3.0.RELEASE/api/</link>
                         </links>
                         <docfilessubdirs>true</docfilessubdirs>
                     </configuration>
