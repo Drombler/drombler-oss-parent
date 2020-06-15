@@ -730,7 +730,7 @@ Contributor(s): .
                         <!-- TODO: needed?-->
                         <!--<link>https://www.softsmithy.org/lib/${dependency.softsmithy.version}/docs/site/softsmithy-lib-all/softsmithy-lib-all/apidocs/</link>-->
                         <!--<link>https://openjfx.io/javadoc/11/</link>-->
-                        <link>https://docs.spring.io/spring-boot/docs/2.2.4.RELEASE/api/</link>
+                        <link>https://docs.spring.io/spring-boot/docs/2.3.0.RELEASE/api/</link>
                     </links>
                     <docfilessubdirs>true</docfilessubdirs>
                     <skip>${reporting.javadoc.skip}</skip>
