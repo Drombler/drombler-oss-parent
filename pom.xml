@@ -262,6 +262,18 @@ Contributor(s): .
                         <contextDirectory>${docker-sources.outputDirectory}</contextDirectory>
                     </configuration>
                 </plugin>
+                <plugin>
+                    <!-- TODO: move to SoftSmithy-Parent-->
+                    <groupId>com.amashchenko.maven.plugin</groupId>
+                    <artifactId>gitflow-maven-plugin</artifactId>
+                    <version>1.14.0</version>
+                    <configuration>
+                        <gitFlowConfig>
+<!--                            <developmentBranch>master</developmentBranch>--> <!-- many Drombler projects still have a develop branch -->
+                            <versionTagPrefix>release-</versionTagPrefix>
+                        </gitFlowConfig>
+                    </configuration>
+                </plugin>
             </plugins>
         </pluginManagement>
     </build>
