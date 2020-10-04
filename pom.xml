@@ -33,7 +33,7 @@ Contributor(s): .
     <inceptionYear>2012</inceptionYear>
     <organization>
         <name>Drombler</name>
-        <url>http://www.drombler.com</url>
+        <url>https://www.drombler.com</url>
     </organization>
 
     <scm>
@@ -77,7 +77,7 @@ Contributor(s): .
         <plugin.jaxb.version>0.14.0</plugin.jaxb.version>
         <plugin.felix-scr.version>1.26.0</plugin.felix-scr.version>
         <plugin.plugin-plugin.version>3.5.2</plugin.plugin-plugin.version>
-        <plugin.asciidoctor.version>1.5.7</plugin.asciidoctor.version>
+        <plugin.asciidoctor.version>1.6.0</plugin.asciidoctor.version>
         <plugin.versions.version>2.7</plugin.versions.version>
 
         <!-- Dependency Versions Defaults -->
@@ -98,7 +98,7 @@ Contributor(s): .
         <dependency.keycloak.version>4.8.3.Final</dependency.keycloak.version>
         <dependency.springfox-swagger.version>2.9.2</dependency.springfox-swagger.version>
         
-        <spring-boot.version>2.1.10.RELEASE</spring-boot.version>
+        <spring-boot.version>2.3.4.RELEASE</spring-boot.version>
 
         <!-- CDI dependency versions -->
         <!--        <dependency.pax-cdi.version>0.11.0</dependency.pax-cdi.version>
@@ -139,10 +139,11 @@ Contributor(s): .
                         </additionalOptions>
                         <detectLinks>true</detectLinks>
                         <links>
-                            <link>https://docs.oracle.com/javaee/7/api/</link>
+                            <link>https://jakarta.ee/specifications/platform/8/apidocs/</link>
                             <!-- TODO: needed?-->
                             <!-- <link>https://www.softsmithy.org/lib/${dependency.softsmithy.version}/docs/site/softsmithy-lib-all/softsmithy-lib-all/apidocs/</link>-->
                             <link>https://docs.oracle.com/javase/8/javafx/api/</link>
+                            <link>https://docs.spring.io/spring-boot/docs/2.3.4.RELEASE/api/</link>
                         </links>
                         <docfilessubdirs>true</docfilessubdirs>
                     </configuration>
@@ -181,7 +182,7 @@ Contributor(s): .
                 <plugin>
                     <groupId>org.jsonschema2pojo</groupId>
                     <artifactId>jsonschema2pojo-maven-plugin</artifactId>
-                    <version>1.0.0-beta1</version>
+                    <version>1.0.2</version>
                     <configuration>
                         <outputDirectory>${project.build.directory}/generated-sources/jsonschema2pojo</outputDirectory>
                     </configuration>
@@ -561,10 +562,11 @@ Contributor(s): .
                     </additionalOptions>                    
                     <detectLinks>true</detectLinks>
                     <links>
-                        <link>https://docs.oracle.com/javaee/7/api/</link>
+                        <link>https://jakarta.ee/specifications/platform/8/apidocs/</link>
                         <!-- TODO: needed?-->
                         <!--<link>https://www.softsmithy.org/lib/${dependency.softsmithy.version}/docs/site/softsmithy-lib-all/softsmithy-lib-all/apidocs/</link>-->
                         <link>https://docs.oracle.com/javase/8/javafx/api/</link>
+                        <link>https://docs.spring.io/spring-boot/docs/2.3.4.RELEASE/api/</link>
                     </links>
                     <docfilessubdirs>true</docfilessubdirs>
                     <skip>${reporting.javadoc.skip}</skip>
