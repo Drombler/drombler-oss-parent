@@ -98,7 +98,8 @@ Contributor(s): .
         <dependency.keycloak.version>4.8.3.Final</dependency.keycloak.version>
         <dependency.springfox-swagger.version>2.9.2</dependency.springfox-swagger.version>
         
-        <spring-boot.version>2.3.4.RELEASE</spring-boot.version>
+        <spring-boot.version>2.3.7.RELEASE</spring-boot.version>
+        <spring-cloud.version>Hoxton.SR9</spring-cloud.version>
 
         <!-- CDI dependency versions -->
         <!--        <dependency.pax-cdi.version>0.11.0</dependency.pax-cdi.version>
@@ -288,6 +289,14 @@ Contributor(s): .
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
+            <dependency>
+                <!-- Import dependency management from Spring Cloud -->
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
 
             <dependency>
                 <groupId>org.keycloak.bom</groupId>
@@ -295,12 +304,6 @@ Contributor(s): .
                 <version>${dependency.keycloak.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
-            </dependency>
-    
-            <dependency>
-                <groupId>ch.sbb</groupId>
-                <artifactId>springboot-graceful-shutdown</artifactId>
-                <version>2.0</version>
             </dependency>
 
             <dependency>
