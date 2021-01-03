@@ -144,7 +144,7 @@ Contributor(s): .
                             <!-- TODO: needed?-->
                             <!-- <link>https://www.softsmithy.org/lib/${dependency.softsmithy.version}/docs/site/softsmithy-lib-all/softsmithy-lib-all/apidocs/</link>-->
                             <link>https://docs.oracle.com/javase/8/javafx/api/</link>
-                            <link>https://docs.spring.io/spring-boot/docs/2.3.4.RELEASE/api/</link>
+                            <link>https://docs.spring.io/spring-boot/docs/2.3.7.RELEASE/api/</link>
                         </links>
                         <docfilessubdirs>true</docfilessubdirs>
                     </configuration>
@@ -267,7 +267,7 @@ Contributor(s): .
                     <!-- TODO: move to SoftSmithy-Parent-->
                     <groupId>com.amashchenko.maven.plugin</groupId>
                     <artifactId>gitflow-maven-plugin</artifactId>
-                    <version>1.14.0</version>
+                    <version>1.15.0</version>
                     <configuration>
                         <gitFlowConfig>
 <!--                            <developmentBranch>master</developmentBranch>--> <!-- many Drombler projects still have a develop branch -->
@@ -581,7 +581,7 @@ Contributor(s): .
                         <!-- TODO: needed?-->
                         <!--<link>https://www.softsmithy.org/lib/${dependency.softsmithy.version}/docs/site/softsmithy-lib-all/softsmithy-lib-all/apidocs/</link>-->
                         <link>https://docs.oracle.com/javase/8/javafx/api/</link>
-                        <link>https://docs.spring.io/spring-boot/docs/2.3.4.RELEASE/api/</link>
+                        <link>https://docs.spring.io/spring-boot/docs/2.3.7.RELEASE/api/</link>
                     </links>
                     <docfilessubdirs>true</docfilessubdirs>
                     <skip>${reporting.javadoc.skip}</skip>
