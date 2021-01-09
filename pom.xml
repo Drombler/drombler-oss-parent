@@ -25,7 +25,7 @@ Contributor(s): .
     <groupId>org.drombler</groupId>
     <artifactId>drombler-oss-parent</artifactId>
     <packaging>pom</packaging>
-    <version>3.4.4-SNAPSHOT</version>
+    <version>3.4.4</version>
 
     <name>Drombler OSS - Parent POM</name>
     <url>https://www.drombler.org</url>
