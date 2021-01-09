@@ -270,7 +270,7 @@ Contributor(s): .
                     <version>1.15.0</version>
                     <configuration>
                         <gitFlowConfig>
-<!--                            <developmentBranch>master</developmentBranch>--> <!-- many Drombler projects still have a develop branch -->
+                            <developmentBranch>master</developmentBranch>
                             <versionTagPrefix>release-</versionTagPrefix>
                         </gitFlowConfig>
                     </configuration>
