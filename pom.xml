@@ -82,12 +82,17 @@ Contributor(s): .
 
         <!-- Dependency Versions Defaults -->
         <dependency.javafx.version>11.0.2</dependency.javafx.version>
-        <dependency.jaxb-osgi>2.3.3</dependency.jaxb-osgi>
+        <dependency.jaxb-osgi.version>2.3.3</dependency.jaxb-osgi.version>
+<!--        <dependency.jaxb-osgi.version>3.0.0</dependency.jaxb-osgi.version>-->
+<!--        <dependency.xml-bind-api.version>3.0.0</dependency.xml-bind-api.version>-->
+<!--        <dependency.activation.version>2.0.0</dependency.activation.version>-->
+<!--        <dependency.annotation-api.version>2.0.0</dependency.annotation-api.version>-->
         <dependency.osgi-core.version>7.0.0</dependency.osgi-core.version>
         <dependency.osgi-compendium.version>7.0.0</dependency.osgi-compendium.version>
         <dependency.felix-configadmin.version>1.9.16</dependency.felix-configadmin.version>
         <dependency.felix-framework.version>6.0.3</dependency.felix-framework.version>
-        <dependency.softsmithy.version>3.0-SNAPSHOT</dependency.softsmithy.version>
+        <dependency.felix-scr.version>2.1.8</dependency.felix-scr.version>
+        <dependency.softsmithy.version>3.0.0-SNAPSHOT</dependency.softsmithy.version>
         <dependency.maven-plugin-api.version>3.6.3</dependency.maven-plugin-api.version>
         <dependency.maven-plugin-annotations.version>3.6.0</dependency.maven-plugin-annotations.version>
         <dependency.maven-project.version>3.0-alpha-2</dependency.maven-project.version>
@@ -96,8 +101,9 @@ Contributor(s): .
         <dependency.maven-pax-plugin.version>1.6.0</dependency.maven-pax-plugin.version>
         <dependency.keycloak.version>4.8.3.Final</dependency.keycloak.version>
         <dependency.springfox-swagger.version>2.9.2</dependency.springfox-swagger.version>
-        
-        <spring-boot.version>2.3.0.RELEASE</spring-boot.version>
+
+        <spring-boot.version>2.4.2</spring-boot.version>
+        <spring-cloud.version>2020.0.0</spring-cloud.version>
 
         <!-- CDI dependency versions -->
         <!--        <dependency.pax-cdi.version>0.11.0</dependency.pax-cdi.version>
@@ -145,7 +151,7 @@ Contributor(s): .
                             <!-- TODO: needed?-->
                             <!-- <link>https://www.softsmithy.org/lib/${dependency.softsmithy.version}/docs/site/softsmithy-lib-all/softsmithy-lib-all/apidocs/</link>-->
                             <!--<link>https://openjfx.io/javadoc/11/</link>-->
-                            <link>https://docs.spring.io/spring-boot/docs/2.3.0.RELEASE/api/</link>
+                            <link>https://docs.spring.io/spring-boot/docs/2.3.7.RELEASE/api/</link>
                         </links>
                         <docfilessubdirs>true</docfilessubdirs>
                     </configuration>
@@ -438,8 +444,31 @@ Contributor(s): .
                 <classifier>win</classifier>
                 <version>${dependency.javafx.version}</version>
             </dependency>
-            
-            
+
+<!--            <dependency>-->
+<!--                &lt;!&ndash;JAXB-API ; Spring Boot v2.4.2 uses older version&ndash;&gt;-->
+<!--                <groupId>jakarta.xml.bind</groupId>-->
+<!--                <artifactId>jakarta.xml.bind-api</artifactId>-->
+<!--                <version>${dependency.xml-bind-api.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                &lt;!&ndash; Spring Boot v2.4.2 uses older version&ndash;&gt;-->
+<!--                <groupId>com.sun.activation</groupId>-->
+<!--                <artifactId>jakarta.activation</artifactId>-->
+<!--                <version>${dependency.activation.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                &lt;!&ndash; Spring Boot v2.4.2 uses older version&ndash;&gt;-->
+<!--                <groupId>jakarta.annotation</groupId>-->
+<!--                <artifactId>jakarta.annotation-api</artifactId>-->
+<!--                <version>${dependency.annotation-api.version}</version>-->
+<!--            </dependency>-->
+            <dependency>
+                <groupId>com.sun.xml.bind</groupId>
+                <artifactId>jaxb-osgi</artifactId>
+                <version>${dependency.jaxb-osgi.version}</version>
+            </dependency>
+
             <dependency>
                 <!-- Import dependency management from Spring Boot -->
                 <groupId>org.springframework.boot</groupId>
@@ -448,6 +477,14 @@ Contributor(s): .
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
+            <dependency>
+                <!-- Import dependency management from Spring Cloud -->
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
 
             <dependency>
                 <groupId>org.keycloak.bom</groupId>
@@ -455,12 +492,6 @@ Contributor(s): .
                 <version>${dependency.keycloak.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
-            </dependency>
-    
-            <dependency>
-                <groupId>ch.sbb</groupId>
-                <artifactId>springboot-graceful-shutdown</artifactId>
-                <version>2.0</version>
             </dependency>
 
             <dependency>
@@ -472,12 +503,6 @@ Contributor(s): .
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger-ui</artifactId>
                 <version>${dependency.springfox-swagger.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.sun.xml.bind</groupId>
-                <artifactId>jaxb-osgi</artifactId>
-                <version>${dependency.jaxb-osgi}</version>
             </dependency>
 
             <dependency>
@@ -499,6 +524,17 @@ Contributor(s): .
                 <groupId>org.apache.felix</groupId>
                 <artifactId>org.apache.felix.framework</artifactId>
                 <version>${dependency.felix-framework.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>org.apache.felix.scr</artifactId>
+                <version>${dependency.felix-scr.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>animal-sniffer-annotations</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             
             <dependency>
@@ -730,7 +766,7 @@ Contributor(s): .
                         <!-- TODO: needed?-->
                         <!--<link>https://www.softsmithy.org/lib/${dependency.softsmithy.version}/docs/site/softsmithy-lib-all/softsmithy-lib-all/apidocs/</link>-->
                         <!--<link>https://openjfx.io/javadoc/11/</link>-->
-                        <link>https://docs.spring.io/spring-boot/docs/2.3.0.RELEASE/api/</link>
+                        <link>https://docs.spring.io/spring-boot/docs/2.3.7.RELEASE/api/</link>
                     </links>
                     <docfilessubdirs>true</docfilessubdirs>
                     <skip>${reporting.javadoc.skip}</skip>
